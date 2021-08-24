@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #DDDDDD;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #AAAAAA;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #777777;
+}
+
+:root {
+ height: 100vh;
+}
+
+html, body, #app-content {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+ul {
+    all: revert;
+}
+#Ribbon {
+    height: 150px;
+}
+
+#container {
+    height: calc(100% - 150px);
+    width: 100%;
+    padding: 2px 5px;
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 5px 4fr 5px 1fr
+}
+
+#left-section, #right-section, #middle-section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 99.2%;
+    overflow: scroll;
+}
+
+#left-section {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border: 1px solid darkgray;
+}
+
+#middle-section {
+    border: 1px solid darkgray;
+}
+
+#right-section {
+    overflow: hidden;
+}
+
+#pageOptionList {
+    background-color: whitesmoke;
+    border-bottom: 1px solid darkgrey; 
+    width: 2000px;
+}
+
+#left-drag-bar {
+    background-color: white;
+    cursor: ew-resize;
+}
+
+#right-drag-bar {
+    background-color: white;
+    cursor: ew-resize;
+}
+.e-btn {
+    text-transform: none;
+}
+
+.flex-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol-text-element {
+    text-align: center; 
+    font-size: 10px; 
+    font-weight: Bold; 
+    line-height: 90%;
+}
+
+.point-circle {
+    transform: scale(0.2, 0.2) translate(10px, 10px);
+}
+
+.list-container ul{
+    list-style: none;
+    padding-left: 30px;
+}
+
+.padding-zero {
+    padding: 0 !important;
+}
+#model-list {
+    margin: 0px;
+}
+
+.list-arrow::before{
+    content: "\25B6";
+    color: darkgray;
+    font-size: 11px;
+    display: inline-block;
+}
+
+.list-open::before {
+    transform: rotate(45deg);
+}
+
+#model-list li {
+    padding: 5px;
+    width: max-content;
+    user-select: none;
+}
+
+#model-list li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.nested-list {
+    display: none;
+}
