@@ -7,8 +7,8 @@
 }
 
 *::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
+    width: 9px;
+    height: 9px;
 }
 
 *::-webkit-scrollbar-track {
@@ -45,6 +45,7 @@ ul {
     height: calc(100% - 150px);
     width: 100%;
     padding: 2px 5px;
+    overflow-x: hidden;
     overflow-y: hidden;
     display: grid;
     grid-template-columns: 1fr 5px 4fr 5px 1fr
@@ -115,13 +116,18 @@ ul {
 .padding-zero {
     padding: 0 !important;
 }
-#model-list {
+
+#model-container {
+    overflow-x: scroll;
+    font-size: 14px;
+}
+.model-list {
     margin: 0px;
 }
 
 .list-arrow::before{
     content: "\25B6";
-    color: darkgray;
+    color: black;
     font-size: 11px;
     display: inline-block;
 }
@@ -130,17 +136,25 @@ ul {
     transform: rotate(45deg);
 }
 
-#model-list li {
+.model-list li {
     padding: 5px;
-    width: max-content;
+    height: 40px;
+    min-width:max-content;
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#model-list li:hover {
-    background-color: lightgray;
+.model-list li:hover {
+    background-color: whitesmoke;
     cursor: pointer;
 }
 
 .nested-list {
     display: none;
+}
+
+.list-icon {
+    margin: 0 5px;
 }

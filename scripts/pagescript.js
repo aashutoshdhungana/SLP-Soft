@@ -1,3 +1,7 @@
+// Read all the items in the list
+// Create a page for all the items in the list
+// onlcick open the page
+
 var pageOptionList = [];
 var activePage;
 var selectedItem;
@@ -14,6 +18,7 @@ function addNewPage() {
     pageOptionList.push(activePage);
     generatePageButtons(pageOptionList);
 }
+
 function generatePageButtons(pages) {
     var pageOptionElement = document.getElementById('pageOptionList');
     var pageContainerWidth =
