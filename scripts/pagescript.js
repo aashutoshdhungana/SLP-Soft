@@ -1,101 +1,7 @@
-// Read all the items in the list
-// Create a page for all the items in the list
-// onlcick open the page
-
-var pageOptionList = [];
-var activePage;
-var selectedItem;
-var pageSwitch = false;
-function addNewPage() {
-    if (activePage) {
-        saveDiagramSettings();
-        var diagram = document.getElementById('diagram').ej2_instances[0];
-        diagram.clear();
-    }
-    activePage = {};
-    activePage.name = 'page' + (pageOptionList.length + 1);
-    activePage.text = 'Page' + (pageOptionList.length + 1);
-    pageOptionList.push(activePage);
-    generatePageButtons(pageOptionList);
-}
-
-function generatePageButtons(pages) {
-    var pageOptionElement = document.getElementById('pageOptionList');
-    var pageContainerWidth =
-        pageOptionElement.parentElement.getBoundingClientRect().width - 1;
-    var buttonWidth = 75;
-    if (pages.length * buttonWidth > pageContainerWidth) {
-        buttonWidth = (pageContainerWidth - 32) / pages.length;
-    }
-    while (pageOptionElement.hasChildNodes()) {
-        pageOptionElement.removeChild(pageOptionElement.lastChild);
-    }
-    for (var i = 0; i < pages.length; i++) {
-        var pageOption = pages[i];
-        var buttonElement = document.createElement('button');
-        buttonElement.setAttribute('id', pageOption.name);
-        buttonElement.setAttribute('style', 'width:' + buttonWidth + 'px');
-        buttonElement.setAttribute('title', pageOption.text);
-        buttonElement.onclick = showPageData.bind(this);
-        pageOptionElement.appendChild(buttonElement);
-        let pageButton = new ej.buttons.Button({
-            content: pageOption.text
-        });
-        pageButton.appendTo(buttonElement);
-        if (activePage.name === pageOption.name) {
-            buttonElement.classList.add('db-active-page');
-        }
-    }
-    var buttonElement = document.createElement('button');
-    buttonElement.setAttribute('id', 'addNewPage');
-    pageOptionElement.appendChild(buttonElement);
-    buttonElement.setAttribute('style', 'width:32px');
-    buttonElement.onclick = addNewPage.bind(this);
-    var pageButton = new ej.buttons.Button({
-        content: '+'
-    });
-    pageButton.appendTo(buttonElement);
-}
-function showPageData(evt) {
-    var target = evt.target;
-    var page1 = findPage(target.id);
-    if (page1 != null) {
-        if (activePage) {
-            var button = document.getElementById(activePage.name);
-            if (button.classList.contains('db-active-page')) {
-                button.classList.remove('db-active-page');
-            }
-            saveDiagramSettings();
-        }
-        activePage = page1;
-        pageSwitch = true;
-        var diagram = document.getElementById('diagram').ej2_instances[0];
-        diagram.isLoading = true;
-        diagram.loadDiagram(JSON.stringify(page1.diagram));
-        diagram.clearSelection();
-        diagram.isLoading = false;
-        pageSwitch = false;
-    }
-    target.classList.add('db-active-page');
-}
-
-function findPage(id) {
-    for (var i = 0; i < pageOptionList.length; i++) {
-        if (pageOptionList[i].name === id) {
-            return pageOptionList[i];
-        }
-    }
-    return null;
-}
-function saveDiagramSettings() {
-    var diagram = document.getElementById('diagram').ej2_instances[0];
-    activePage.diagram = JSON.parse(diagram.saveDiagram());
-}
-
 // Adding onclick to the dropdown
 let arrow = document.querySelectorAll('.list-arrow');
 for (let i = 0; i < arrow.length; i++) {
-    arrow[i].onclick = (e) => {
+    arrow[i].onclick = () => {
         let nested = arrow[i].parentElement.nextElementSibling;
         if (nested.style.display === 'none') {
             nested.style.display = 'block';
@@ -111,3 +17,75 @@ for (let i = 0; i < arrow.length; i++) {
         }
     };
 }
+let modelPages = [];
+
+function getModelData() {
+    let models = document.querySelectorAll('.model-button');
+    for (let i = 0; i < models.length; i++) {
+        models[i].onclick = () => {
+            openModelPage(models[i].id);
+        }
+        let modelPage = {
+            id: models[i].id,
+            title: models[i].querySelector('span').innerText,
+            diagram: JSON.parse(document.getElementById('diagram').ej2_instances[0].saveDiagram())
+        }
+        modelPages.push(modelPage);
+    }
+    return modelPages;
+}
+
+// Open model pages
+function openModelPage(id) {
+    // Donot open if already open
+    let pageList = document.getElementById('pageOptionList');
+    let button = document.createElement('button');
+    button.classList.add('page-tab');
+    button.setAttribute('width', '32px');
+    button.id = id + '-button';
+    button.innerHTML = modelPages.find(x => x.id === id).title;
+    button.onclick = () => {
+        changeModelPage(id);
+    }
+    pageList.appendChild(button);
+    changeModelPage(id); // this will save current and open next
+}
+
+//
+function saveModelPage(id) {
+    let index = modelPages.findIndex(x => x.id === id);
+    let diagramData = JSON.parse(document.getElementById('diagram').ej2_instances[0].saveDiagram());
+    modelPages[index].diagram = diagramData;
+}
+function changeModelPage(id) {
+    let pageList = document.getElementById('pageOptionList');
+    let activePage = pageList.querySelector('.active-model-page');
+    if (activePage) {
+        activePage.classList.toggle('active-model-page');
+        let activeButtonId = activePage.id.toString().replace('-button', '');
+        saveModelPage(activeButtonId);
+    }
+
+    let newButton = pageList.querySelector(`#${id}-button`);
+    newButton.classList.toggle('active-model-page');
+    
+    let diagramData = modelPages.find(x => x.id === id).diagram;
+    let diagramElement = document.getElementById('diagram').ej2_instances[0];
+    diagramElement.isLoading = true;
+    diagramElement.loadDiagram(JSON.stringify(diagramData))
+    diagramElement.clearSelection();
+    diagramElement.isLoading = false;
+}
+
+function closeModelPage() {
+    // check if the model is last in the list
+
+    // if model is last in the list dont close otherwise
+    
+    // save currently active page
+
+    // and append the next in the list
+}
+// when clicked on the model from the list the corresponding diagram opens and adds itself to the page list in the top
+// when switching pages similar searches from the list and appends the json data of the diagram
+

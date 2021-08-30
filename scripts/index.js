@@ -90,16 +90,24 @@ theoryPalette.appendTo('#symbol-palette-theory');
 // Function to switch palettes
 function switchToTheory() {
     let commPalette = document.getElementById('symbol-palette-comm');
+    let commModel = document.getElementById('comm-model-list');
     let theoryPalette = document.getElementById('symbol-palette-theory');
+    let theoryModel = document.getElementById('theory-model-list');
     commPalette.style.display = 'none';
+    commModel.style.display = 'none';
     theoryPalette.style.display = 'block';
+    theoryModel.style.display = 'block';
 }
 
 function switchToComm() {
     let commPalette = document.getElementById('symbol-palette-comm');
+    let commModel = document.getElementById('comm-model-list');
     let theoryPalette = document.getElementById('symbol-palette-theory');
+    let theoryModel = document.getElementById('theory-model-list');
     commPalette.style.display = 'block';
+    commModel.style.display = 'block';
     theoryPalette.style.display = 'none';
+    theoryModel.style.display = 'none';
 }
 
 // Initializing and appending diagram
@@ -113,11 +121,11 @@ var diagram = new ej.diagrams.Diagram({
     },
     bridgeDirection: 'Left',
     created: function(args) {
-        addNewPage();
+        getModelData();
+        openModelPage('main-project-model-comm');
       }
 });
 diagram.appendTo('#diagram');
-
 //#region code for canvas to svg tranformation
 let canvasSymbols = document.querySelectorAll('.e-symbol-draggable > canvas');
 for (let i = 0; i < canvasSymbols.length; i++) {
