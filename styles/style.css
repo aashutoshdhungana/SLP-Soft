@@ -172,15 +172,38 @@ ul {
 }
 
 .page-tab {
-    background-color: whitesmoke;
-    width: 150px;
-    height: 20px;
-    word-wrap: unset;
-    word-break: keep-all;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid black;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-right: 2px;
+    font-size: 12px;
+    width: calc(max-content);
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
 }
 
+.button-text {
+    padding-right: 7px;
+    display: inline-flex;
+    align-items: center;
+    height: 25px;
+}
+
+.button-cross::after {
+    content: '\2716';
+    cursor: pointer;
+}
+
+.button-cross:hover {
+    color: crimson;
+}
 .active-model-page {
-    background-color: #AAAAAA;
+    font-size: 13px;
+    font-weight: bolder;
+    background-color: white;
 }
