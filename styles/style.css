@@ -207,3 +207,29 @@ ul {
     font-weight: bolder;
     background-color: white;
 }
+
+#active-context-menu {
+    padding: 0;
+    height: fit-content;
+}
+.context-list {
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: left;
+    list-style: none;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    height: 30px;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.context-list:hover {
+    background-color: #DDDDDD
+}
+
+.has-open-context-menu {
+    background-color: #DDDDDD;
+}
