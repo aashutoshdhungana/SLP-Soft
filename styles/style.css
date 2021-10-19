@@ -39,6 +39,7 @@ ul {
 }
 #Ribbon {
     height: 150px;
+    font-size: 5px;
 }
 
 #container {
@@ -232,4 +233,78 @@ ul {
 
 .has-open-context-menu {
     background-color: #DDDDDD;
+}
+
+.other-form {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -50px;
+    margin-right: -125px;
+    border: black solid 1px;
+    height: 110px;
+    width: 250px;
+    background-color: white;
+}
+
+.add-model-title {
+    background-color: dodgerblue;
+    font-size: 15px;
+    color: lightcyan;
+}
+
+.other-label {
+    display: block;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.other-input {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: smaller;
+    width: 85%;
+}
+
+.title-text {
+    padding: 5px;
+    width: 92%;
+    display: inline-block;
+}
+
+.cross-button {
+    width: 8%;
+    padding: 5px 0;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+}
+.cross-button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.other-submit {
+    margin-top: 5px;
+    margin-left: 80%;
+    width: 40px;
+    height: 20px;
+}
+
+.disabled-button {
+    background-color: #CCCCCC;
+    color: #777777;
+}
+
+.disabled-button:hover {
+    cursor: default;
+}
+
+.e-btn:not(.e-inputbtn), .e-tbtn, .e-split-btn {
+    font-size: 12px;
+}
+
+.e-menu.e-context {
+    width: 225px;
 }

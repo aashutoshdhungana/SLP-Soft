@@ -88,14 +88,19 @@ let theoryData = [{
     toolTip: 'Identify The Communication Theory'
 }, {
     id: 'uT',
-    title: 'Ut',
-    annotation: 'Ut',
+    title: 'UT',
+    annotation: 'UT',
     toolTip: 'Identify Our Utilization Theory'
 }, {
     id: 'interpretationFunction',
     title: 'Interpretation Function',
     annotation: 'Interpret',
     toolTip: 'Identify The Interpretation Function'
+}, {
+    id: 'interpretationFunction1',
+    title: 'Interpretation Funciton',
+    annotation: 'Int{ }',
+    toolTip: 'Identify The Interpretation Function' 
 }, {
     id: 'applyTheory',
     title: 'Apply Theory',
@@ -139,6 +144,11 @@ let theoryData = [{
     toolTip: 'Identify The Given Reference',
     type: 'Reference1'
 }, {
+    id: 'characteristicsTh',
+    title: 'Characteristics',
+    annotation: 'Theory Characteristics',
+    toolTip: 'Characteristic of Theory'
+}, {
     id: 'groupTheoryVertical',
     title: 'Group',
     annotation: {
@@ -159,6 +169,11 @@ let theoryData = [{
     },
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
+}, {
+    id: 'linkednodeTH',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
 }, {
     id: 'equation1',
     title: 'Equation',
@@ -253,6 +268,16 @@ let systemData = [{
     toolTip: 'Represents The Physical System',
     type: 'Text'
 }, {
+    id: 'constantCharacteristics',
+    title: 'Constant Characteristics',
+    annotation: 'Constant Characteristics',
+    toolTip: 'Physical System Constant Characteristics'
+}, {
+    id: 'mobilitySystem',
+    title: 'Mobility',
+    toolTip: 'Identify Our Mobility',
+    type: 'mobility'
+}, {
     id: 'groupSystem',
     title: 'Group',
     annotation: {
@@ -275,6 +300,11 @@ let systemData = [{
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
 }, {
+    id: 'linkedNodeSystem',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
+}, {
     id: 'equation',
     title: 'Equation',
     annotation: '√x',
@@ -286,6 +316,36 @@ function getThoerySystem() {
 }
 //#region Fundamentals
 let fundamentalData = [{
+    id: 'fundamentalTheory',
+    title: 'Fundamental Theory',
+    annotation: 'Fundamental Theory',
+    toolTip: 'Identify The Fundamental of Theory'
+}, {
+    id: 'fundamentalCommunication',
+    title: 'Fundamental Commmunication',
+    annotation: 'Fundamental Communication',
+    toolTip: 'Identify The Fundamental of Communication Theory'
+}, {
+    id: 'fundamentalInformationTheory',
+    title: 'Fundamental Information Theory',
+    annotation: 'Fundamental Information Theory',
+    toolTip: 'Identify The Fundamental of Information Theory'
+}, {
+    id: 'fundamentalInstrumentationTheory',
+    title: 'Fundamental Instrumentation Theory',
+    annotation: 'Fundamental Instrumentation Theory',
+    toolTip: 'Identify The Fundamental of Instrumentation Theory'
+}, {
+    id: 'fundamentalEducation',
+    title: 'Fundamental Education Theory',
+    annotation: 'Fundamental Education Theory',
+    toolTip: 'Identify The Fundamental of Education Theory'
+}, {
+    id: 'fundamentalPower',
+    title: 'Fundamental Power Theorem',
+    annotation: 'Fundamental Power Theorem',
+    toolTip: 'Identify The Fundamental of The Power Theorem'
+}, {
     id: 'fundamentalMarketingTheory',
     title: 'Fundamental Marketing Theory',
     annotation: 'Fundamental Marketing Theory',
@@ -351,6 +411,11 @@ let fundamentalData = [{
         width: 70
     },
     toolTip: 'Use to Group or Add Entities'
+}, {
+    id: 'linkednodefundamental',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
 }, {
     id: 'equation2',
     title: 'Equation',
@@ -668,6 +733,11 @@ let theoryInterface = [{
     toolTip: 'Right to Left Relationship',
     type: 'WideArrow'
 }, {
+    id: 'linkednodeinterface',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
+}, {
     id: 'euqationInterface',
     title: 'Equation',
     annotation: '√x',
@@ -726,6 +796,11 @@ let theorySignals = [{
     },
     toolTip: 'Denote Negative Flow Direction',
     type: 'Arrow'
+}, {
+    id: 'linkednodesignal',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
 }];
 //#endregion
 function getTheorySignal() {
@@ -747,6 +822,11 @@ let instrumentData = [{
     title: 'Instrument Derivative',
     annotation: 'Instrument Derrivative',
     toolTip: 'Identify Derrivative of Method'
+}, {
+    id: 'methodDerivative',
+    title: 'Method Derivative',
+    annotation: 'Method Derivative',
+    toolTip: 'Identify Derivative of Method'
 }, {
     id: 'derrivative',
     title: 'Derrivative',
@@ -824,8 +904,8 @@ let instrumentData = [{
     toolTip: 'Identify Input Element'
 }, {
     id: 'dl/dT',
-    title: 'dl/dT',
-    annotation: 'dl/dT',
+    title: 'dI/dT',
+    annotation: 'dI/dT',
     toolTip: 'Identify Instrument Derivative'
 }, {
     id: 'naturalElement1',
@@ -846,6 +926,17 @@ let instrumentData = [{
     toolTip: 'Identify Group Exchange Elements',
     type: 'Overlap'
 }, {
+    id: 'emptycontainerinsturment',
+    title: 'Empty Container',
+    annotation: 'Empty Container',
+    toolTip: 'A Container to Add Part To',
+    type: 'squareemptycontainer'
+}, {
+    id: 'linkednodeinstrument',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
+} ,{
     id: 'equation3',
     title: 'Equation',
     annotation: '√x',
@@ -1105,6 +1196,11 @@ let theoryFunctions = [{
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity',
 }, {
+    id: 'linkednodefunciton',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
+}, {
     id: 'equationFunction',
     title: 'Equation',
     annotation: '√x',
@@ -1182,6 +1278,11 @@ let theoryStability = [{
     toolTip: 'Identify Our Direction',
     type: 'Direction'
 }, {
+    id: 'mobilitystability',
+    title: 'Mobility',
+    toolTip: 'Identify Our Mobility',
+    type: 'mobility'
+} ,{
     id: 'roadMark',
     title: 'Road Mark',
     annotation: {
@@ -1212,6 +1313,38 @@ let theoryStability = [{
     toolTip: 'Identify Specific Distance',
     type: 'Arrow'
 }, {
+    id: 'route',
+    title: 'Route',
+    annotation: {
+        shape: {
+            target: 'Arrow',
+            source: 'Arrow'
+        },
+        content: [{
+            content: 'Route',
+            alignment: 'Before'
+        }],
+        style: {}
+    },
+    toolTip: 'Identify Specific Route',
+    type: 'Arrow'
+}, {
+    id: 'interroute',
+    title: 'Inter-Route',
+    annotation: {
+        shape: {
+            target: 'Arrow',
+            source: 'Arrow'
+        },
+        content: [{
+            content: 'Inter-Route',
+            alignment: 'Before'
+        }],
+        style: {}
+    },
+    toolTip: 'Identify Specific Route',
+    type: 'Arrow'
+} ,{
     id: 'theoryScale',
     title: 'Theory Scale',
     annotation: 'Hello',
@@ -1422,6 +1555,33 @@ let theoryStability = [{
     toolTip: 'Identify Domain Bottom',
     type: 'DomainBottom'
 }, {
+    id: 'inline',
+    title: 'Inline',
+    annotation: {
+        shape: {
+            target: 'Arrow',
+            source: 'Arrow'
+        },
+        content: {
+            content: 'Inline',
+            alignment: 'Before'
+        }
+    },
+    toolTip: 'Inline to Each Other',
+    type: 'Arrow'
+}, {
+    id: 'ontop',
+    title: 'On Top',
+    annotation: 'On Top',
+    toolTip: 'Identify an Entity On Top',
+    type: 'Text'
+}, {
+    id: 'below',
+    title: 'Below',
+    annotation: 'Below',
+    toolTip: 'Identify an Entity On Below',
+    type: 'Text'
+} ,{
     id: 'graphAxis',
     title: 'Graph Axis',
     annotation: ['Label Name', 'Label Name'],
@@ -1570,66 +1730,136 @@ let theoryStability = [{
     type: 'Arrow'
 }, {
     id: 'initialTime',
-    title: 'Initial Time',
+    title: 'Time 0',
     annotation: {
         content: [{
-            content: 'time 0',
+            content: 't0',
             offset: {x: 0.5, y: 1},
             margin: {top: 20}
         }],
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
-    toolTip: 'Identify Initial Time',
+    toolTip: 'Initial Time',
+    type: 'VerticalLine'
+}, {
+    id: 'initialTimeplus',
+    title: 'Time 0 plus',
+    annotation: {
+        content: [{
+            content: 't0+',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }],
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'Time After Initial Time',
+    type: 'VerticalLine' 
+}, {
+    id: 'initialTimeplusplus',
+    title: 'Time 0 plus plus',
+    annotation: {
+        content: [{
+            content: 't0++',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }],
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'More time after initial time',
     type: 'VerticalLine'
 }, {
     id: 'firstTime',
-    title: 'First Time',
+    title: 'Time 1',
     annotation: {
         content: [{
-            content: 'time 1',
+            content: 't1',
             offset: {x: 0.5, y: 1},
             margin: {top: 20}
         }],
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
-    toolTip: 'Identify The First Time',
+    toolTip: 'First Time',
     type: 'VerticalLine'
 }, {
-    id: 'secondTime',
-    title: 'Second Time',
+    id: 'firstTimePlus',
+    title: 'Time 1 plus number',
     annotation: {
         content: [{
-            content: 'time 2',
+            content: 't1 + n',
             offset: {x: 0.5, y: 1},
             margin: {top: 20}
         }],
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
-    toolTip: 'Identify The Second Time',
+    toolTip: 'Time After Time 1',
     type: 'VerticalLine' 
 }, {
-    id: 'thirdTime',
-    title: 'Third Time',
+    id: 'secondTime',
+    title: 'Time 2',
     annotation: {
         content: [{
-            content: 'time 3',
+            content: 't2',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }], 
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'Second Time',
+    type: 'VerticalLine'
+}, {
+    id: 'secondTimePlus',
+    title: 'Time 2 plus number',
+    annotation: {
+        content: [{
+            content: 't2 + n',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }], 
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'Time After Second Time',
+    type: 'VerticalLine'
+}, {
+    id: 'thirdTime',
+    title: 'Time 3',
+    annotation: {
+        content: [{
+            content: 't3',
             offset: {x: 0.5, y: 1},
             margin: {top: 20}
         }],
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
-    toolTip: 'Identify The Third Time',
+    toolTip: 'Third Time',
+    type: 'VerticalLine'
+}, {
+    id: 'thirdTimePlus',
+    title: 'Time 3 plus number',
+    annotation: {
+        content: [{
+            content: 't3 + n',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }],
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'Time After Third Time',
     type: 'VerticalLine'
 }, {
     id: 'fourthTime',
     title: 'Fourth Time',
     annotation: {
         content: [{
-            content: 'time 4',
+            content: 't4',
             offset: {x: 0.5, y: 1},
             margin: {top: 20}
         }],
@@ -1637,6 +1867,20 @@ let theoryStability = [{
         style: {strokeDashArray: '10 5'}
     },
     toolTip: 'Identify The Fourth Time',
+    type: 'VerticalLine'
+}, {
+    id: 'fourthTimePlus',
+    title: 'Time 4 plus number',
+    annotation: {
+        content: [{
+            content: 't4 + n',
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20}
+        }],
+        length: 250,
+        style: {strokeDashArray: '10 5'}
+    },
+    toolTip: 'Time After Fourth Time',
     type: 'VerticalLine'
 }, {
     id: 'timePrime',
@@ -1794,6 +2038,11 @@ let theoryStability = [{
     },
     toolTip: 'Show Continuity Of Entity',
     type: 'Continuity'
+}, {
+    id: 'linkednodestablility',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
 }, {
     id: 'euqation',
     title: 'Equation',
@@ -1992,6 +2241,11 @@ let theoryLabel = [{
     toolTip: 'Identify Right Direction',
     type: 'Arrow'
 }, {
+    id: 'crossoutlabel',
+    title: 'Cross Out',
+    toolTip: 'To Cross Out an Entity',
+    type: 'redcross'
+}, {
     id: 'leftCurlBrace',
     title: 'Left Curl Brace',
     annotation: {
@@ -2062,7 +2316,7 @@ let theoryLabel = [{
         }
     },
     toolTip: 'Use to Show Separation',
-    type: 'Line'
+    type: 'VerticalLine'
 }, {
     id: 'pushUp',
     title: 'Push Up',
@@ -2147,15 +2401,10 @@ let theoryLabel = [{
     toolTip: 'Denote a Continuity',
     type: 'VerticalContinuity'
 }, {
-    id: 'characteristic',
-    title: 'Characteristic',
-    annotation: 'Theory of Characteristic',
-    toolTip: 'Characteristics Theory'
-}, {
-    id: 'constantCharactersitic',
-    title: 'Constant Characteristic',
-    annotation: 'Physical System Constant Characteristic',
-    toolTip: 'Physical System Constant Characteristic'
+    id: 'linkednodeLabel',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
 }];
 //#endregion
 function getTheoryLabel() {

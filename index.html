@@ -10,9 +10,9 @@
     <!--StyleSheets-->
     <link rel="stylesheet" href = "resources/EJ2/material.css">
     <link rel="stylesheet" href = "./icons/font/flaticon.css">
-    <link rel="stylesheet" href = "styles/style.css">
     <link rel="stylesheet" href="resources/Ej1/Css/ej.web.all.min.css"> 
     <link rel="stylesheet" href ="resources/Ej1/Css/ej.icons.css">
+    <link rel="stylesheet" href = "styles/style.css">
     <!--JQuery-->
     <script src = "resources/jquery-3.6.0.js"></script>
     <!--Ej dependencies-->
@@ -72,7 +72,31 @@
                 </ul>
             </li>
         </ul>
-
+        <ul id="other-action">
+            <li>Relate Entity With Principle</li>
+            <li>Relate Entity With Principle Aspect</li>
+            <li>Show Attached Entity</li>
+            <li>Uncompare Compared Entity</li>
+            <li>Remove Difference From Entity</li>
+            <li>Detach Attached Entity</li>
+            <li>Unidentify Part of Entity</li>
+            <li>Unidentify Entity as One</li>
+        </ul>
+        <ul id="compose-list">
+            <li>Compose Entity</li>
+            <li>Decompose Entity</li>
+        </ul>
+        <ul id="rotate-list">
+            <li>Rotate Entity Left</li>
+            <li>Rotate Entity Right</li>
+            <li>Flip Entity Horizontal</li>
+            <li>Flip Entity Vertical</li>
+        </ul>
+        <ul id="additional-action">
+            <li>Disassociate Relationship</li>
+            <li>Remove Similarity From Entity</li>
+            <li></li>
+        </ul>
         <!--Symbol Palette and diagram-->
         <div id="container" onmouseup="endDrag()" onmousemove="onDrag(event)">
             <div id="left-section">
@@ -470,29 +494,45 @@
                             </li>
                             <ul class="nested-list" style="display: block;">
                                 <li>
-                                    <svg class="list-icon">
-                                        <use xlink:href="#flow-chart-1" />
-                                    </svg>
-                                    <span>Main Theory Application Model</span>
+                                    <span></span>
+                                    <span class="model-button" id="main-theory-application-model-th">
+                                        <svg class="list-icon">
+                                            <use xlink:href="#flow-chart-1" />
+                                        </svg>
+                                        <span>Main Theory Application Model</span>
+                                    </span>
                                 </li>
+                                <ul class="nested-list" style="display: none;"></ul>
                                 <li>
-                                    <svg class="list-icon">
-                                        <use xlink:href="#flow-chart-1" />
-                                    </svg>
-                                    <span>System Apply Theory Circular</span>
+                                    <span></span>
+                                    <span class="model-button" id="system-apply-theory-circular-th">
+                                        <svg class="list-icon">
+                                            <use xlink:href="#flow-chart-1" />
+                                        </svg>
+                                        <span>System Apply Theory Circular</span>
+                                    </span>
                                 </li>
+                                <ul class="nested-list" style="display: none;"></ul>
                                 <li>
-                                    <svg class="list-icon">
-                                        <use xlink:href="#flow-chart-1" />
-                                    </svg>
-                                    <span>Function in Functional System</span>
+                                    <span></span>
+                                    <span class="model-button" id="function-in-functional-system-th">
+                                        <svg class="list-icon">
+                                            <use xlink:href="#flow-chart-1" />
+                                        </svg>
+                                        <span>Function in Functional System</span>
+                                    </span>
                                 </li>
+                                <ul class="nested-list" style="display: none;"></ul>
                                 <li>
-                                    <svg class="list-icon">
-                                        <use xlink:href="#flow-chart-1" />
-                                    </svg>
-                                    <span> Other Theory Model</span>
+                                    <span></span>
+                                    <span class="model-button" id="other-theory-model-th">
+                                        <svg class="list-icon">
+                                            <use xlink:href="#flow-chart-1" />
+                                        </svg>
+                                        <span> Other Theory Model</span>
+                                    </span>
                                 </li>
+                                <ul class="nested-list" style="display: none;"></ul>
                                 <li>
                                     <span class="list-arrow"></span>
                                     <svg class="list-icon">
@@ -502,53 +542,85 @@
                                 </li>
                                 <ul class="nested-list" style="display: none;">
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Parts of Function to Function</span>
+                                        <span></span>
+                                        <span class="model-button" id="parts-of-function-to-function-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Parts of Function to Function</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Part of Instrument to Function</span>
+                                        <span></span>
+                                        <span class="model-button" id="part-of-instrument-to-instrument-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Part of Instrument to Instrument</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Natural or Input Element Usage</span>
+                                        <span></span>
+                                        <span class="model-button" id="natural-or-input-element-usage-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Natural or Input Element Usage</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>List of Identified Theorems</span>
+                                        <span></span>
+                                        <span class="model-button" id="list-of-identified-theorems-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>List of Identified Theorems</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>List of Applied Theorems</span>
+                                        <span></span>
+                                        <span class="model-button" id="list-of-applied-theorems-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>List of Applied Theorems</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Instrument or Method Produced</span>
+                                        <span></span>
+                                        <span class="model-button" id="instrument-or-method-produced-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Instrument or Method Produced</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Function Produced from Theory Application</span>
+                                        <span></span>
+                                        <span class="model-button" id="function-produced-from-theory-application-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Function Produced from Theory Application</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Other Support Model</span>
+                                        <span></span>
+                                        <span class="model-button" id="other-support-model-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Other Support Model</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                 </ul>
                                 <li>
                                     <span class="list-arrow"></span>
@@ -559,46 +631,73 @@
                                 </li>
                                 <ul class="nested-list" style="display: none;">
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>System Understanding Theory</span>
+                                        <span></span>
+                                        <span class="model-button" id="system-understanding-theory-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>System Understanding Theory</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Function of Theory Scale</span>
+                                        <span></span>
+                                        <span class="model-button" id="function-on-theory-scale-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Function on Theory Scale</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Functional Stability</span>
+                                        <span></span>
+                                        <span class="model-button" id="functional-stability-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Functional Stability</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Project Direction and Destination</span>
+                                        <span></span>
+                                        <span class="model-button" id="project-direction-and-destination-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Project Direction and Destination</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Problem Development and Identification</span>
+                                        <span></span>
+                                        <span class="model-button" id="problem-development-and-identification-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Problem Development and Identification</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Philosophy Inheritance Chart</span>
+                                        <span></span>
+                                        <span class="model-button" id="philosophy-inheritance-chart-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Philosophy Inheritance Chart</span>
+                                        </span>
                                     </li>
+                                    <ul class="nested-list" style="display: none;"></ul>
                                     <li>
-                                        <svg class="list-icon">
-                                            <use xlink:href="#flow-chart-1" />
-                                        </svg>
-                                        <span>Other Stability Model</span>
+                                        <span></span>
+                                        <span class="model-button" id="other-stability-model-th">
+                                            <svg class="list-icon">
+                                                <use xlink:href="#flow-chart-1" />
+                                            </svg>
+                                            <span>Other Stability Model</span>
+                                        </span>
                                     </li>
                                 </ul>
                             </ul>
@@ -619,6 +718,12 @@
             </div>
         </div>
     </div>
+    <script>
+        // Global Varaibles
+        let currentDomain = 0;
+        let commPages = [];
+        let theoryPages = [];
+    </script>
     <script src="./scripts/ribbon.js"></script>
     <script src="./scripts/pagescript.js"></script>
     <script src="./scripts/drawFunctions.js"></script>

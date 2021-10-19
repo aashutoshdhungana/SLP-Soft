@@ -62,12 +62,12 @@ let analysisData = [{
     id: 'principle1',
     title: 'Principle',
     annotation: 'Principle',
-    toolTip: 'Principle as Set'
+    toolTip: 'Represent The Main Set of Principles'
 }, {
     id: 'principle2',
     title: 'Principle',
     annotation: 'Principle',
-    toolTip: 'Principle as Main Set'
+    toolTip: 'Principle a Subset of Principles'
 }, {
     id: 'analysisWindow',
     title: 'Analysis Window',
@@ -103,12 +103,51 @@ let analysisData = [{
     toolTip: 'Problem Development From Error',
     type: 'Circle'
 }, {
+    id: 'principleAspect',
+    title: 'Principle Aspect',
+    annotation: 'Principle Aspect',
+    toolTip: 'Identify Aspect of a Principle'
+}, {
+    id: 'redcrossanalysis',
+    title: 'Red Cross',
+    toolTip: 'Use to Cross Out Entity',
+    type: 'redcross'
+}, {
+    id: 'solutionanalysis',
+    title: 'Solution',
+    annotation: 'Analysis',
+    toolTip: 'Represent an Actual Solution'
+}, {
     id: 'group4',
     title: 'Group',
     annotation: {
-        content: [{content: 'Group'}],
-        height: 80,
-        width: 70
+        content: [{
+            content: 'Group'
+        }],
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities',
 }, {
@@ -151,10 +190,11 @@ let analysisData = [{
     toolTip: 'Represent a Group of Feedback',
     type: 'Overlap'
 }, {
-    id: 'equationAnalysis',
-    title: 'Equation',
-    annotation: 'root(x)',
-    toolTip: 'Use to Add Eqution'
+    id: 'solutionsanalysis',
+    title: 'Solutions',
+    annotation: 'Solutions',
+    toolTip: 'Represent a Group of Solutions',
+    type: 'Overlap'
 }];
 
 //#endregion
@@ -280,6 +320,11 @@ let applicationRects = [{
     },
     toolTip: 'Multi Inputs Comm & App Mixture',
 }, {
+    id: 'emptycontainer',
+    title: 'Empty Container',
+    toolTip: 'A Container to Add Part to',
+    type: 'emptycontainer'
+}, {
     id: 'work',
     title: 'Work',
     annotation: {
@@ -332,9 +377,33 @@ let applicationRects = [{
     id: 'group1',
     title: 'Group',
     annotation: {
-        content: [{content: 'Group'}],
-        height: 80,
-        width: 70
+        content: [{
+            content: 'Group'
+        }],
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities',
 }, {
@@ -346,11 +415,6 @@ let applicationRects = [{
     },
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
-}, {
-    id: 'equationapp',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 
 //#endregion
@@ -391,6 +455,35 @@ let areaData = [{
     annotation: 'Site',
     toolTip: 'Identify a Site',
     type: 'House'
+}, {
+    id: 'workingareaAL',
+    title: 'Working Area',
+    annotation: {
+        fill: 'none',
+        radius: 75,
+        content: [{
+            content: 'Working Area'
+        }]
+    },
+    toolTip: 'Identify a Working Area',
+    type: 'Circle'
+}, {
+    id: 'locationAL',
+    title: 'Location',
+    annotation: {
+        fill: 'none',
+        radius: 30,
+        content: [{
+            content: 'Locaiton'
+        }]
+    },
+    toolTip: 'Identify a Location',
+    type: 'Circle'
+}, {
+    id: 'mobilityAL',
+    title: 'Mobility',
+    toolTip: 'Movement of a Person',
+    type: 'mobility'
 }];
 //#endregion
 function getCommAreAndLocation() {
@@ -656,7 +749,7 @@ var personData = [{
     type: 'Person'
 }, {
     id: 'user',
-    title: 'A person as a User',
+    title: 'User',
     annotation: ['Person Name','User'],
     toolTip: 'A person as a User',
     type: 'Person'
@@ -679,10 +772,11 @@ var personData = [{
     toolTip: 'Denote Person With Number',
     type: 'PersonNoFrame'
 }, {
-    id: 'PersonWithNumberAndFrame',
+    id: 'PersonWithNumberAndFrame123',
     title: 'x[n]',
     annotation: ['Xn'],
-    toolTip: 'Denote Person With Number'
+    toolTip: 'Denote Person With Number',
+    type: 'Person'
 }, {
     id: 'groupOfPeople',
     title: 'Group of People',
@@ -706,8 +800,30 @@ var personData = [{
         content: [{
             content: 'Comm Mix'
         }],
-        height: 60,
-        width: 60
+        ports: [{
+            id: 'top-port',
+            offset: {x: 0.5, y: 0},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right-port',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'bottom-port',
+            offset: {x: 0.5, y: 1},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 50,
+        width: 50
     },
     toolTip: 'Two Input Communication',
 }, {
@@ -717,10 +833,37 @@ var personData = [{
         content: [{
             content: 'Comm Mix'
         }],
-        height: 60,
-        width: 60
+        ports: [{
+            id: 'top-port',
+            offset: {x: 0.5, y: 0},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right-port',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'bottom-port',
+            offset: {x: 0.5, y: 1},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 50,
+        width: 50
     },
     toolTip: 'Multi Input Communication'
+}, {
+    id: 'personAspect',
+    title: 'Person Aspect',
+    annotation: 'Person Aspect',
+    toolTip: 'Identify Aspect of a Person'
 }, {
     id: 'groupPreson1',
     title: 'Group',
@@ -728,8 +871,30 @@ var personData = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities'
 }, {
@@ -756,10 +921,15 @@ var personData = [{
     toolTip: 'Group of External Communication Holder',
     type: 'Overlap'
 }, {
-    id: 'equationperson',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
+    id: 'coverPerson',
+    title: 'Cover',
+    toolTip: 'Use to Cover a Person',
+    type: 'cover'
+}, {
+    id: 'mobilityPerson',
+    title: 'Mobility',
+    toolTip: 'Movement of a Person',
+    type: 'mobility'
 }];
 //#endregion
 function getCommPerson() {
@@ -1146,11 +1316,6 @@ let commLabelData = [{
     },
     type: 'CurlyClose',
     toolTip: 'Right Braces',
-}, {
-    id: 'equationLabelComm',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 
 //#endregion
@@ -1350,17 +1515,63 @@ var communicationData = [{
     annotation: 'Audio',
     toolTip: 'Represents an actual Audio'
 }, {
-    id: 'communication',
-    title: 'Communication',
-    annotation: 'Communication',
-    toolTip: 'Represents Communication',
-    type: 'text'
+    id: 'dictionary',
+    title: 'Dictionary',
+    annotation: {
+        radius: 50,
+        fill: 'none',
+        content: [{
+            offset: {x: 0.5, y: 1},
+            margin: {top: 8},
+            content: 'Dictonary'
+        }]
+    },
+    toolTip: 'Represent a Dictionary of Words',
+    type: 'Circle'
+}, {
+    id: 'wordCommunication',
+    title: 'Word',
+    annotation: {
+        fill: 'none',
+        radius: 25,
+        content: [{
+            content: 'Word'
+        }],
+    },
+    toolTip: 'Represent a Word',
+    type: 'Circle'
+}, {
+    id: 'collection',
+    title: 'Collection',
+    annotation: {
+        radius: 50,
+        fill: 'none',
+        content: [{
+            offset: {x: 0.5, y: 1},
+            margin: {top: 8},
+            content: 'Collection'
+        }]
+    },
+    toolTip: 'Represent a Collection of Entity',
+    type: 'Circle'
+}, {
+    id: 'entityCommunication',
+    title: 'Entity',
+    annotation: {
+        fill: 'none',
+        radius: 25,
+        content: [{
+            content: 'Entity'
+        }],
+    },
+    toolTip: 'Represents an Entity',
+    type: 'Circle'
 }, {
     id: 'x1',
     title: 'x',
     annotation: 'x',
     toolTip: 'Represents Communication',
-    type: 'text'
+    type: 'Text'
 }, {
     id: 'relationship123',
     title: 'Relationship',
@@ -1394,8 +1605,30 @@ var communicationData = [{
         content: [{
             content: 'Comm Mix'
         }],
-        height: 60,
-        width: 60
+        ports: [{
+            id: 'top-port',
+            offset: {x: 0.5, y: 0},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right-port',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'bottom-port',
+            offset: {x: 0.5, y: 1},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 50,
+        width: 50
     },
     toolTip: 'Two Input Communication'
 }, {
@@ -1405,8 +1638,30 @@ var communicationData = [{
         content: [{
             content: 'Comm Mix'
         }],
-        height: 60,
-        width: 60
+        ports: [{
+            id: 'top-port',
+            offset: {x: 0.5, y: 0},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right-port',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'bottom-port',
+            offset: {x: 0.5, y: 1},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 50,
+        width: 50
     },
     toolTip: 'Multi Input Communication'
 }, {
@@ -1416,9 +1671,32 @@ var communicationData = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70
-    }
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
+    },
+    toolTip: 'Use to Group or Add Entities'
 }, {
     id: 'continuityComm',
     title: 'Continuity',
@@ -1452,11 +1730,6 @@ var communicationData = [{
     annotation: 'Answers',
     toolTip: 'Represents a Group of Answer',
     type: 'Overlap'
-}, {
-    id: 'equationComm',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation',
 }];
 //#endregion
 function getCommunication() {
@@ -1764,11 +2037,6 @@ let otherData = [{
     },
     toolTip: 'Use to Graph',
     type: 'VerticalLine'
-}, {
-    id: 'equationOtherData',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 
 //#endregion

@@ -96,8 +96,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fontSize: 10
             },
             ports: ports,
-            width: 120,
-            height: 60,
+            width: 210,
+            height: 100,
         };
     }
 
@@ -131,8 +131,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fontSize: 10
             },
             ports: rectPorts,
-            height: 60,
-            width: 120
+            height: 100,
+            width: 210
         };
     }
 
@@ -166,8 +166,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fontSize: 10
             },
             ports: rectPorts,
-            height: 60,
-            width: 120
+            height: 100,
+            width: 210
         };
     }
 
@@ -194,6 +194,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     </g>`
             },
             annotations: [{
+                offset: {x: 0.55, y:0.5},
                 content: annotation
             }],
             style: {
@@ -201,8 +202,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fontSize: 10
             },
             ports: rectPorts,
-            height: 60,
-            width: 120
+            height: 100,
+            width: 210
         };
     }
 
@@ -255,7 +256,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: annotation[1],
                 offset: {x: 0.5, y: 1},
                 margin: {
-                    top: 27
+                    top: 30
                 },
                 style: {
                     textWrapping: 'NoWrap'
@@ -306,7 +307,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: annotation[1],
                 offset: {x: 0.5, y: 1},
                 margin: {
-                    top: 27
+                    top: 30
                 }
             });
         }
@@ -370,7 +371,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     verticalAlignment: 'Bottom',
                     offset: { x: 0.5, y: 1 },
                     margin: {
-                        top: 50
+                        top: 20
                     }
                 }
             ],
@@ -1352,17 +1353,17 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect height="710" width="900" stroke-width="0" fill="transparent" />
-                    <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="355" ry="355" rx="450"/> 
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="125" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="350" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="560" cy="370" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="775" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="130" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="170" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="580" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="540" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="655" cy="180" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="675" cy="540" r="100" />
+                    <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="355" ry="355" rx="450"/> 
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="125" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="350" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="560" cy="370" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="775" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="450" cy="130" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="245" cy="170" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="450" cy="580" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="245" cy="540" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="655" cy="180" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="675" cy="540" r="100" />
                 </g>`
             },
 
@@ -1429,7 +1430,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect x = "0" y = "0" vector-effect="non-scaling-stroke" height="80" width="160" stroke="black" stroke-dasharray="8 4" stroke-width="1" fill="Transparent"/>
-                    <rect x="30" y="20" width="100" height="40" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                    <rect x="30" y="20" width="100" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
                     <foreignObject class="symbol-text-container" x="${0.25 * 160 / 2}" width="${160 * 0.75}" height="${80}" visibility="hidden">
                     <div style="height: ${80}px" class="flex-container">
                         <div width="${0.75 * 160}" class="symbol-text-element">
@@ -1623,7 +1624,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g>
-                    <rect vector-effect="non-scaling-stroke" height="60" width="120" stroke-width="1" fill="white" stroke="black"/>
+                    <rect vector-effect="non-scaling-stroke" height="60" width="120" stroke-width="1" fill="none" stroke="black"/>
                     <circle vector-effect="non-scaling-stroke" stroke-width="1" fill="black" stroke="black" cx="60" cy="15" r="3.5"/>
                     <circle vector-effect="non-scaling-stroke" stroke-width="1" fill="black" stroke="black" cx="60" cy="30" r="3.5"/>
                     <circle vector-effect="non-scaling-stroke" stroke-width="1" fill="black" stroke="black" cx="60" cy="45" r="3.5"/>
@@ -1634,9 +1635,137 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             width: 100
         };
     }
+
+    else if (type === 'cover') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="10" width="7.5" stroke-width="1" stroke="black" fill="green" opacity="0.5"/>
+                    </g>`
+            },
+            annotations: [{
+                content: annotation
+            }],
+            height: 100,
+            width: 45
+        };
+    }
+    
+    else if (type === 'mobility') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="10" width="10" stroke="none" fill="none"/>
+                    <path d="M 0 4, S 2.5 1.5, 5 4 M 5 4, S 7.5 6.5, 10 4 M 0 6, S 2.5 3.5, 5 6 M 5 6, S 7.5 8.5, 10 6" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none"/>
+                    </g>`
+            },
+            height: 50,
+            width: 50
+        };
+    }
+
+    else if (type === 'redcross') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="10" width="10" stroke="none" fill="none"/>
+                    <path vector-effect="non-scaling-stroke" stroke="red" stroke-width="1" fill="none" d="M 0 0 L 10 10 M 0 10 L 10 0"/> 
+                </g>`
+            },
+            height: 50,
+            width: 50
+        };
+    }
+
+    else if (type === 'linkednode') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="12" width="10" stroke="none" fill="none"/>
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" cx="5" cy="5" r="5"/>
+                    <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none" d="M 2 11 L 8 11 M 2 12 L 8 12"/>     
+                </g>`
+            },
+            annotations: [{
+                content: '1',
+                offset: {x: 0.5, y: 0.45}
+            }],
+
+            height: 60,
+            width: 50
+        };
+    }
+
+    else if (type === 'emptycontainer') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transfrom="translate(2,2)">
+                <rect vector-effect="non-scaling-stroke" height="150" width="700" fill="none" stroke="black" stroke-width="1"/>
+                </g>`
+            },
+            annotations: [{
+                content: 'Empty Container'
+            }],
+            height: 150,
+            width: 700
+        };
+    }
+
+    else if (type === 'squareemptycontainer') {
+        node = {
+            id,
+            addInfo: [{
+                title,
+                toolTip
+            }],
+            shape: {
+                type: 'Native',
+                content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="200" width="200" fill="none" stroke="black" stroke-width="1"/>
+                </g>`
+            },
+            annotations: [{
+                content: annotation,
+                offset: {x: 0.5, y: 0},
+                margin: {bottom: 10}
+            }],
+            height: 200,
+            width: 200
+        };
+    }
     else {
-        let height = (annotation.height !== undefined) ? annotation.height : 60;
-        let width = (annotation.width !== undefined) ? annotation.width : 120;
+        let height = (annotation.height !== undefined) ? annotation.height : 100;
+        let width = (annotation.width !== undefined) ? annotation.width : 210;
         let text = (annotation.content !== undefined) ? annotation.content[0].content : annotation;
         let textLen;
         if (String(text).length === 1) {
@@ -1662,7 +1791,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g transform="translate(2,2)">
-                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="white"/>
+                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="none"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * width / 2}" width="${width*0.75}" height="${height}" visibility="hidden">
                         <div style="height: ${height}px" class="flex-container">
                             <div width="${width * 0.75}" class="symbol-text-element">

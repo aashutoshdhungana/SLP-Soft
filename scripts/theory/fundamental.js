@@ -1,4 +1,34 @@
 let fundamentalData = [{
+    id: 'fundamentalTheory',
+    title: 'Fundamental Theory',
+    annotation: 'Fundamental Theory',
+    toolTip: 'Identify The Fundamental of Theory'
+}, {
+    id: 'fundamentalCommunication',
+    title: 'Fundamental Commmunication',
+    annotation: 'Fundamental Communication',
+    toolTip: 'Identify The Fundamental of Communication Theory'
+}, {
+    id: 'fundamentalInformationTheory',
+    title: 'Fundamental Information Theory',
+    annotation: 'Fundamental Information Theory',
+    toolTip: 'Identify The Fundamental of Information Theory'
+}, {
+    id: 'fundamentalInstrumentationTheory',
+    title: 'Fundamental Instrumentation Theory',
+    annotation: 'Fundamental Instrumentation Theory',
+    toolTip: 'Identify The Fundamental of Instrumentation Theory'
+}, {
+    id: 'fundamentalEducation',
+    title: 'Fundamental Education Theory',
+    annotation: 'Fundamental Education Theory',
+    toolTip: 'Identify The Fundamental of Education Theory'
+}, {
+    id: 'fundamentalPower',
+    title: 'Fundamental Power Theorem',
+    annotation: 'Fundamental Power Theorem',
+    toolTip: 'Identify The Fundamental of The Power Theorem'
+}, {
     id: 'fundamentalMarketingTheory',
     title: 'Fundamental Marketing Theory',
     annotation: 'Fundamental Marketing Theory',
@@ -60,6 +90,11 @@ let fundamentalData = [{
     toolTip: 'Use to Group or Add Entities',
     type: 'Vertical'
 }, {
+    id: 'linkednodefundamental',
+    title: 'Linked Node',
+    toolTip: 'Linked Node',
+    type: 'linkednode'
+} ,{
     id: 'equation2',
     title: 'Equation',
     annotation: '√x',

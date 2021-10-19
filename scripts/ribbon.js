@@ -588,29 +588,45 @@ var tabs = [{
     text: 'Action',
     groups: [{
         text: 'Entity',
-        alignType: ej.Ribbon.AlignType.Columns,
+        alignType: ej.Ribbon.AlignType.Rows,
         content: [{
             groups: [{
                 id: 'showRelationship',
                 text: 'Show Relationship of Entities',
                 toolTip: 'Show Relationship of Entities',
-                width: '150px',
+                width: '100px',
+                buttonSettings: {
+                    contentType: ej.ContentType.TextAndImage,
+                    imagePosition: ej.ImagePosition.ImageTop,
+                    prefixIcon: 'flaticon-relation'
+                },
+            }, {
+                id: 'identifySimilarities',
+                text: 'Identify Similarity of Entities',
+                width: '100px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
                     prefixIcon: 'flaticon-relation'
                 }
-            }]
-        }, {
-            groups: [{
-                id: 'identifySimilarities',
-                text: 'Identify Similarity of Entities'
             }, {
                 id: 'identifyRelationship',
-                text: 'Identify Relationship as Entity'
+                text: 'Identify Relationship as Entity',
+                width: '100px',
+                buttonSettings: {
+                    contentType: ej.ContentType.TextAndImage,
+                    imagePosition: ej.ImagePosition.ImageTop,
+                    prefixIcon: 'flaticon-relation'
+                }
             }, {
                 id: 'attachselected',
-                text: 'Attach Selected Entities'
+                text: 'Attach Selected Entities',
+                width: '100px',
+                buttonSettings: {
+                    contentType: ej.ContentType.TextAndImage,
+                    imagePosition: ej.ImagePosition.ImageTop,
+                    prefixIcon: 'flaticon-relation'
+                }
             }]
         }]
     }, {
@@ -620,7 +636,7 @@ var tabs = [{
                 id: 'compareSlected',
                 text: 'Compare Selected Entities',
                 toolTip: 'Compare Selected Entities',
-                width: '150px',
+                width: '100px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
@@ -630,7 +646,7 @@ var tabs = [{
                 id: 'identiftDifference',
                 text: 'Identify Difference of Entities',
                 toolTip: 'Identify Difference of Entities',
-                width: '150px',
+                width: '100px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
@@ -658,10 +674,24 @@ var tabs = [{
                 }
             }, {
                 id: 'Other Action',
-                text: 'Other Action'
+                text: 'Other Action',
+                toolTip: 'Other Action',
+                type: ej.Ribbon.type.splitButton,
+                splitButtonSettings: {
+                    targetID: "other-action",
+                    buttonMode: "dropdown",
+                    arrowPosition: "right"
+                }
             }, {
                 id: 'additionalAction',
-                text: 'Additional Actions'
+                text: 'Additional Actions',
+                toolTip: 'Additional Action',
+                type: ej.Ribbon.type.splitButton,
+                splitButtonSettings: {
+                    targetID: "additional-action",
+                    buttonMode: "dropdown",
+                    arrowPosition: "right"
+                }
             }]
         }]
     }, {
@@ -755,20 +785,28 @@ var tabs = [{
                 id: 'compose',
                 text: 'Compose',
                 toolTip: 'Compose',
-                width: '100px',
-                buttonSettings: {
-                    contentType: ej.ContentType.TextAndImage,
-                    imagePosition: ej.ImagePosition.ImageTop,
+                width: '70px',
+                height: '50px',
+                type: ej.Ribbon.type.splitButton,
+                splitButtonSettings: {
+                    contentType: ej.ContentType.ImageOnly,
+                    targetID: "compose-list",
+                    buttonMode: "dropdown",
+                    arrowPosition: "bottom",
                     prefixIcon: 'flaticon-tile'
                 }
             }, {
                 id: 'rotate',
                 text: 'Rotate',
                 toolTip: 'Rotate',
-                width: '100px',
-                buttonSettings: {
-                    contentType: ej.ContentType.TextAndImage,
-                    imagePosition: ej.ImagePosition.ImageTop,
+                width: '70px',
+                height: '50px',
+                type: ej.Ribbon.type.splitButton,
+                splitButtonSettings: {
+                    contentType: ej.ContentType.ImageOnly,
+                    targetID: "rotate-list",
+                    buttonMode: 'dropdown',
+                    arrowPosition: 'bottom',
                     prefixIcon: 'flaticon-redo-arrow-large'
                 }
             }]
@@ -1015,7 +1053,7 @@ var tabs = [{
             groups: [{
                 id: 'toCommunicationDomain',
                 text: 'Switch to Communication Domain',
-                width: '200px',
+                width: '160px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
@@ -1025,7 +1063,7 @@ var tabs = [{
             }, {
                 id: 'toTheoryDomain',
                 text: 'Switch to Theory Domain',
-                width: '150px',
+                width: '160px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,

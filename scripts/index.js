@@ -89,6 +89,10 @@ theoryPalette.appendTo('#symbol-palette-theory');
 
 // Function to switch palettes
 function switchToTheory() {
+    if (currentDomain === 1) {
+        return;
+    }
+    currentDomain = 1;
     let commPalette = document.getElementById('symbol-palette-comm');
     let commModel = document.getElementById('comm-model-list');
     let theoryPalette = document.getElementById('symbol-palette-theory');
@@ -97,9 +101,22 @@ function switchToTheory() {
     commModel.style.display = 'none';
     theoryPalette.style.display = 'block';
     theoryModel.style.display = 'block';
+    let commButton = document.getElementById('Ribbon_toCommunicationDomain');
+    commButton.disabled = false;
+    commButton.firstElementChild.classList.remove('disabled-button');
+
+    let theoryButton = document.getElementById('Ribbon_toTheoryDomain');
+    theoryButton.disabled = true;
+    theoryButton.firstElementChild.classList.add('disabled-button');
+
+    openTheoryTab();
 }
 
 function switchToComm() {
+    if (currentDomain === 0) {
+        return;
+    }
+    currentDomain = 0;
     let commPalette = document.getElementById('symbol-palette-comm');
     let commModel = document.getElementById('comm-model-list');
     let theoryPalette = document.getElementById('symbol-palette-theory');
@@ -108,6 +125,14 @@ function switchToComm() {
     commModel.style.display = 'block';
     theoryPalette.style.display = 'none';
     theoryModel.style.display = 'none';
+    let commButton = document.getElementById('Ribbon_toCommunicationDomain');
+    commButton.disabled = true;
+    commButton.firstElementChild.classList.add('disabled-button');
+
+    let theoryButton = document.getElementById('Ribbon_toTheoryDomain');
+    theoryButton.disabled = false;
+    theoryButton.firstElementChild.classList.remove('disabled-button');
+    openCommTab();
 }
 
 // Initializing and appending diagram

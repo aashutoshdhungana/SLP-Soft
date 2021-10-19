@@ -8,7 +8,7 @@ document.querySelector('body').onmousedown = (e) => {
 
 // prevent default behavious when right clicked
 document.querySelector('body').oncontextmenu = (e) => {
-    if (document.querySelector('#comm-model-list ul').contains(e.target)) {
+    if (document.querySelector('#comm-model-list ul').contains(e.target) || document.querySelector('#theory-model-list ul').contains(e.target)) {
         e.preventDefault();
     }
 }
@@ -419,6 +419,139 @@ function getContextMenuItem(modelId) {
             { id: 'my-site-of-operation-comm', title: 'My Site of Operation' },
             'sep'
         ]
+        // Theory list
+    }, {
+        id: 'main-theory-application-model-th',
+        list: [
+            {id: 'sub-theory-application-model-th', title: 'Sub Theory Application Model'},
+            {id: 'theory-application-model-th', title: 'Theory Application Model'},
+            {id: 'main-theory-application-model-th', title: 'Main Theory Application Model'},
+            'sep'
+        ]
+    }, {
+        id: 'system-apply-theory-circular-th',
+        list: [
+            {id: 'group-of-system-apply-theory-circular-th', title: 'Group of System Apply Theory Circular'},
+            {id: 'system-apply-theory-circular-1-th', title: 'System Apply Theory Circular'},
+            'sep'
+        ]
+    }, {
+        id: 'function-in-functional-system-th',
+        list: [
+            {id: 'my-function-in-functional-system-th', title: 'My Function in Functional System'},
+            {id: 'system-function-in-functional-system-th', title: 'System Function in Functional System'},
+            'sep'
+        ]
+    }, {
+        id: 'other-theory-model-th',
+        list: ['sep']
+    }, {
+        id: 'parts-of-function-to-function-th',
+        list: [
+            {id: 'parts-of-function-to-function-1-th', title: 'Parts of Function to Function'},
+            {id: 'parts-of-function-to-method', title: 'Parts of Function to Method'},
+            'sep'
+        ]
+    }, {
+        id: 'part-of-instrument-to-instrument-th',
+        list: [
+            {id: 'part-of-instrument-to-instrument-1-th', title: 'Part of Instrument to Instrument'},
+            'sep'
+        ]
+    }, {
+        id: 'natural-or-input-element-usage-th',
+        list: [
+            {id: 'natural-element-th', title: 'Natural Element'},
+            {id: 'input-element-th', title: 'Input Element'},
+            'sep'
+        ]
+    }, {
+        id: 'list-of-identified-theorems-th',
+        list: [
+            {id: 'list-of-identified-theorems-1-th', title: 'List of Identified Thorems'},
+            'sep'
+        ]
+    }, {
+        id: 'list-of-applied-theorems-th',
+        list: [
+            {id: 'list-of-applied-theorems-th', title: 'List of Applied Theorems'},
+            'sep'
+        ]
+    }, {
+        id: 'instrument-or-method-produced-th',
+        list: [
+            {id: 'instrument-produced-th', title: 'Instrument Produced'},
+            {id: 'method-produced-th', title: 'Method Produced'},
+            'sep'
+        ]
+    }, {
+        id: 'function-produced-from-theory-application-th',
+        list: [
+            {id: 'function-produced-from-theory-application-1-th', title: 'Function Produced From Theory Application'},
+            'sep'
+        ]
+    }, {
+        id: 'other-support-model-th',
+        list: [
+            {id: 'other-support-model-1-th', title: 'Other Support Model'},
+            'sep'
+        ]
+    }, {
+        id: 'system-understanding-theory-th',
+        list: [
+            {id: 'system-understanding-theory-1-th', title: 'System Understanding Theory'},
+            {id: 'my-understanding-theory=th', title: 'My Understanding Theory'},
+            'sep'
+        ]
+    }, {
+        id: 'function-on-theory-scale-th',
+        list: [
+            {id: 'my-function-on-theory-scale-th', title: 'My Function on Theory Scale'},
+            {id: 'group-function-on-theory-scale-th', title: 'Group Function on Theory Scale'},
+            {id: 'function-on-theory-scale-th', title: 'Function on Theory Scale'},
+            'sep'
+        ]
+    }, {
+        id: 'functional-stability-th',
+        list: [
+            {id: 'functional-stability-1-th', title: ' Functional Stability'},
+            {id: 'group-functional-stability-th', title: 'Group Functional Stability'},
+            'sep'
+        ]
+    }, {
+        id: 'project-direction-and-destination-th',
+        list: [
+            {id: 'project-direction-and-destination-1-th', title: 'Project Direction And Destination'},
+            {id: 'phase-direction-and-destination-th', title: 'Phase Direction and Destination'},
+            {id: 'part-of-project-direction-and-destination-th', title: 'Part of Project Direction and Destination'},
+            'sep',
+            {id: 'my-direction-th', title: 'My Direction'},
+            {id: 'my-destination-th', title: 'My Destination'},
+            {id: 'my-direction-and-destination-th', title: 'My Direction and Destination'},
+            'sep',
+            {id: 'system-direction-th', title: 'System Direction'},
+            {id: 'system-destination-th', title: 'System Destination'},
+            {id: 'system-direction-and-destination-th', title: 'System Direction and Destination'},
+            'sep'
+        ]
+    }, {
+        id: 'problem-development-and-identification-th',
+        list: [
+            {id: 'problem-development-and-identification-1-th', title: 'Problem Development and Identification'},
+            'sep'
+        ]
+    }, {
+        id: 'philosophy-inheritance-chart-th',
+        list: [
+            {id: 'philosophy-inheritance-chart-1-th', title: 'Philosophy Inheritance Chart'},
+            'sep'
+        ]
+    }, {
+        id: 'other-stability-model-th',
+        list: [
+            {id: 'other-stability-model-1-th', title: 'Other Stability Model'},
+            'sep'
+        ]
     }];
     let item = contextMenuList.find(x => x.id === modelId)
     if(item) {
@@ -443,10 +576,10 @@ function openContextMenu(e, modelId) {
     // Create the contextmenu
     let list = document.createElement('ul');
     list.id = 'active-context-menu';
-    let xpos = (e.clientX >= window.visualViewport.width - 200) ? e.clientX - 200 : e.clientX;
-    let ypos = (e.clientY >= window.visualViewport.height - 200) ? e.clientY - 200 : e.clientY;
+    let xpos = (e.clientX >= window.visualViewport.width - 250) ? e.clientX - 250 : e.clientX;
+    let ypos = (e.clientY >= window.visualViewport.height - 250) ? e.clientY - 250 : e.clientY;
     list.classList.add('context-menu');
-    list.style.width = '200px';
+    list.style.width = '250px';
     list.style.position = 'fixed';
     list.style.top = `${ypos}px`;
     list.style.left = `${xpos}px`;
@@ -476,9 +609,12 @@ function openContextMenu(e, modelId) {
     let other = document.createElement('li');
     other.classList.add('context-list')
     other.id = modelId + 'other';
+    other.onclick = (e) => {
+        closeContextMenu();
+        otherSubModel(modelId);
+    }
     other.innerHTML = 'Other';
     list.appendChild(other);
-    // On click for each item call add sub model function
     let body = document.querySelector('body');
     body.appendChild(list);
 }
@@ -622,6 +758,121 @@ function openSubMenuContext(e, modelId) {
 } 
 // !----------------------------------Other function how pop up input  ----------------------------------------------------------! //
 
+function otherSubModel(modelId) {
+    let element = document.querySelector('.other-form');
+    if (element != null) {
+        return;
+    }
+    let form = document.createElement('form');
+    let label = document.createElement('label');
+    let input = document.createElement('input');
+    let title = document.createElement('div');
+    let titlespan = document.createElement('span');
+    let crossspan = document.createElement('span');
+    let submit = document.createElement('input');
+    
+    titlespan.innerHTML = 'Add Model';
+    titlespan.classList.add('title-text');
+    crossspan.innerHTML = 'X';
+    crossspan.classList.add('cross-button');
+    crossspan.onclick = () => {
+        closeForm();
+    };
+    title.appendChild(titlespan);
+    title.appendChild(crossspan);
+    title.classList.add('add-model-title');
+
+
+    label.setAttribute('for', 'ModelName');
+    label.classList.add('other-label');
+    label.innerHTML = 'Model Name';
+    input.setAttribute('type', 'text');
+    input.setAttribute('name', 'ModelName');
+    input.classList.add('other-input');
+    input.id = 'model-name-other';
+
+    submit.type = 'submit';
+    submit.value = 'Add';
+    submit.classList.add('other-submit');
+    form.setAttribute('action', 'javascript:void(0);');
+    form.onsubmit = () => {
+        let input = document.getElementById('model-name-other').value.trim();
+        let id = input.toLowerCase().split(' ').join('-');
+        let elm = document.getElementById(id);
+        if (input.length < 1 
+            || 
+            elm != null) {
+            return;
+        }
+        let data = {
+            id: id,
+            title: input
+        };
+        createSubModel(modelId, data);
+        closeForm();
+    };
+    form.appendChild(title);
+    form.appendChild(label);
+    form.appendChild(input);
+    form.appendChild(submit);
+    form.id = modelId + '-form';
+    form.classList.add('other-form');
+
+    let body = document.querySelector('body');
+    body.appendChild(form);
+    // get data for the data list
+    // createsubmodel with data
+}
+
+function closeForm() {
+    document.querySelector('.other-form').remove();
+}
+
+function openCommTab() {
+    let pageList = document.getElementById('pageOptionList').children;
+    if (pageList.length != 0) {
+        for (let i = 0; i < pageList.length; i++) {
+            theoryPages.push(pageList[i].id.toString().replace('-button',''));
+        }
+    } 
+    if (commPages.length === 0) {
+        openModelPage('main-project-model-comm');
+    }
+    else {
+        for (let i = 0; i < commPages.length; i++) {
+            openModelPage(commPages[i]);
+        }
+        commPages = [];
+    }
+
+    for (let i = 0; i < theoryPages.length; i++) {
+        openModelPage(theoryPages[i]);
+        closeModelPage(theoryPages[i]);
+    }
+}
+
+function openTheoryTab() {
+    let pageList = document.getElementById('pageOptionList').children;
+    if (pageList.length != 0) {
+        for (let i = 0; i < pageList.length; i++) {
+            commPages.push(pageList[i].id.toString().replace('-button',''));
+        }
+    } 
+    if (theoryPages.length === 0) {
+        openModelPage('main-theory-application-model-th');
+    }
+    else {
+        for (let i = 0; i < theoryPages.length; i++) {
+            openModelPage(theoryPages[i]);
+        }
+        theoryPages = [];
+    }
+
+    for (let i = 0; i < commPages.length; i++) {
+        openModelPage(commPages[i]);
+        closeModelPage(commPages[i]);
+    }
+}
 // Open sub model function
     // Create a opened nested list from the model
     // Make the model a list arrow button
