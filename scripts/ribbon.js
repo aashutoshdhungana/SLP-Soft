@@ -1053,7 +1053,7 @@ var tabs = [{
             groups: [{
                 id: 'toCommunicationDomain',
                 text: 'Switch to Communication Domain',
-                width: '160px',
+                width: '135px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
@@ -1063,7 +1063,7 @@ var tabs = [{
             }, {
                 id: 'toTheoryDomain',
                 text: 'Switch to Theory Domain',
-                width: '160px',
+                width: '135px',
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,

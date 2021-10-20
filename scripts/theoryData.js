@@ -155,8 +155,30 @@ let theoryData = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities',
 }, {
@@ -174,11 +196,6 @@ let theoryData = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'equation1',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 //#endregion
 function getTheory() {
@@ -284,8 +301,30 @@ let systemData = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities'
 }, {
@@ -304,11 +343,6 @@ let systemData = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'equation',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation',
 }];
 //#endregion
 function getThoerySystem() {
@@ -407,8 +441,30 @@ let fundamentalData = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities'
 }, {
@@ -416,11 +472,6 @@ let fundamentalData = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'equation2',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation',
 }];
 //#endregion
 function getThoeryFundamental() {
@@ -737,11 +788,6 @@ let theoryInterface = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'euqationInterface',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation',
 }];
 //#endregion
 function getTheoryInterface() {
@@ -936,11 +982,6 @@ let instrumentData = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-} ,{
-    id: 'equation3',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 //#endregion
 function getTheoryInstrument() {
@@ -1181,8 +1222,30 @@ let theoryFunctions = [{
         content: [{
             content: 'Group'
         }],
-        height: 80,
-        width: 70  
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
     },
     toolTip: 'Use to Group or Add Entities',
 }, {
@@ -1200,11 +1263,6 @@ let theoryFunctions = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'equationFunction',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }];
 //#endregion
 function getTheoryFunction() {
@@ -2043,11 +2101,6 @@ let theoryStability = [{
     title: 'Linked Node',
     toolTip: 'Linked Node',
     type: 'linkednode'
-}, {
-    id: 'euqation',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation',
 }];
 //#endregion
 function getTheoryStability() {
@@ -2387,11 +2440,6 @@ let theoryLabel = [{
     },
     toolTip: 'Position Down',
     type: 'Arrow'
-}, {
-    id: 'equaitonLabel',
-    title: 'Equation',
-    annotation: '√x',
-    toolTip: 'Use to Add Equation'
 }, {
     id: 'continuityLabel',
     title: 'Continuity',

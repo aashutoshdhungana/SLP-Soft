@@ -151,6 +151,8 @@ var diagram = new ej.diagrams.Diagram({
       }
 });
 diagram.appendTo('#diagram');
+
+
 //#region code for canvas to svg tranformation
 let canvasSymbols = document.querySelectorAll('.e-symbol-draggable > canvas');
 for (let i = 0; i < canvasSymbols.length; i++) {
