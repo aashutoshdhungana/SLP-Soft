@@ -23,6 +23,8 @@ let allShapes = [].concat(persons).concat(communication).concat(application).con
     concat(analysis).concat(commSignal).concat(area).concat(others).concat(commlabel).concat(system).
     concat(thoery).concat(fundamental).concat(interface).concat(theorySignal).concat(instrument).concat(functions).
     concat(stability).concat(thoerylabel);
+
+console.log(allShapes);
 // Initializing symbol palette
 var commPalette = new ej.diagrams.SymbolPalette({
     expandMode: 'Single',
@@ -145,6 +147,17 @@ var diagram = new ej.diagrams.Diagram({
         verticalRuler: { interval: 10, segmentWidth: 100, thickness: 20, tickAlignment: "RightOrBottom"}
     },
     bridgeDirection: 'Left',
+    contextMenuSettings: {
+        show: true,
+        items: [{
+            id: 'edit',
+            text: 'Edit1'
+        }],
+        showCustomMenuOnly: true,
+    },
+    contextMenuOpen: function (args) {
+        onOpenContextMenu(args);
+    },
     created: function(args) {
         getModelData();
         openModelPage('main-project-model-comm');

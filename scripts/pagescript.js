@@ -1,8 +1,13 @@
 // Close context menu on mouse click
 document.querySelector('body').onmousedown = (e) => {
     let menu = document.getElementById('active-context-menu');
+    let subList = document.getElementById('subListDiagram');
     if( menu && menu != e.target && !menu.contains(e.target)) {
         closeContextMenu();
+    }
+
+    if (subList && subList != e.target && !subList.contains(e.target)) {
+        closeSubListMenu();
     }
 }
 
@@ -32,7 +37,6 @@ for (let i = 0; i < arrow.length; i++) {
         }
     };
 }
-
 // List of model pages
 let modelPages = [];
 

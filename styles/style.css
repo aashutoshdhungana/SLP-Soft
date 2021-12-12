@@ -308,3 +308,25 @@ ul {
 .e-menu.e-context {
     width: 225px;
 }
+
+.e-contextmenu-wrapper ul .e-menu-item, .e-contextmenu-container ul .e-menu-item {
+    height: max-content;
+    line-height: 27px;
+}
+
+#diagram_contextMenu {
+    font-size: small;
+}
+
+#subListDiagram {
+    font-size: small;
+}
+
+#subListDiagram li {
+    height: max-content;
+    line-height: 27px;
+}
+
+.e-ribbon .e-active-content {
+    z-index: 999;
+}
