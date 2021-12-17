@@ -24,7 +24,17 @@ let allShapes = [].concat(persons).concat(communication).concat(application).con
     concat(thoery).concat(fundamental).concat(interface).concat(theorySignal).concat(instrument).concat(functions).
     concat(stability).concat(thoerylabel);
 
-console.log(allShapes);
+allShapes = everyShape;
+
+var text = JSON.stringify(allShapes);
+
+// var a = document.createElement("a");
+// var file = new Blob([text], {type: 'text/plain'});
+// a.href = URL.createObjectURL(file);
+// a.download = 'my.json';
+// a.click();
+
+
 // Initializing symbol palette
 var commPalette = new ej.diagrams.SymbolPalette({
     expandMode: 'Single',
