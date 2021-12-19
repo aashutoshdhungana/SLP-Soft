@@ -503,7 +503,8 @@ var tabs = [{
                 buttonSettings: {
                     contentType: ej.ContentType.TextAndImage,
                     imagePosition: ej.ImagePosition.ImageTop,
-                    prefixIcon: 'flaticon-view'
+                    prefixIcon: 'flaticon-view',
+                    click: 'showHideDialog'
                 }
             }, {
                 id: 'indow',

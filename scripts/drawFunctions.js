@@ -48,7 +48,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g transform="translate(2,2)">
                     <rect height="40" width="120" stroke-width="0" fill="transparent" />
-                    <ellipse vector-effect="non-scaling-stroke" fill="white" stroke="black" stroke-width="1" cx="60" cy="20" rx="60" ry="20"/>
+                    <ellipse vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" cx="60" cy="20" rx="60" ry="20"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 120 / 2}" width="${120*0.75}" height="${40}" visibility="hidden">
                         <div style="height: ${40}px" class="flex-container">
                             <div width="${120 * 0.75}" class="symbol-text-element">
@@ -66,6 +66,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fontSize: 10
             },
             ports: rectPorts,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 40,
             width: 120
         };
@@ -74,7 +75,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
     else if (type === 'Continuity') {
         let strokeWidth = (annotation.strokeWidth !== undefined) ? annotation.strokeWidth : 1;
         let strokeDashArray = (annotation.strokeDashArray !== undefined) ? annotation.strokeDashArray : '';
-        let fill = (annotation.fill !== undefined) ? annotation.fill : 'White';
+        // let fill = (annotation.fill !== undefined) ? annotation.fill : 'White';
         let ports = (annotation.ports !== undefined) ? annotation.ports : rectPorts;
         node = {
             id,
@@ -85,7 +86,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g transform="translate(2, 2)">
-                    <rect width="10" height="5" fill="${fill}" vector-effect="non-scaling-stroke" stroke="black" stroke-width="${strokeWidth}" stroke-dasharray = "${strokeDashArray}" />
+                    <rect width="10" height="5" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="${strokeWidth}" stroke-dasharray = "${strokeDashArray}" />
                     <circle vector-effect="non-scaling-stroke" cx="3.5" cy="2.5" r="0.4"/>
                     <circle vector-effect="non-scaling-stroke" cx="5.0" cy="2.5" r="0.4"/>
                     <circle vector-effect="non-scaling-stroke" cx="6.5" cy="2.5" r="0.4"/>
@@ -95,6 +96,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: ports,
             width: 210,
             height: 100,
@@ -112,8 +114,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect x="0" y="0" width="100" height="50" fill="none" stroke-width="0"/>
-                    <rect width="90" height="50" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
-                    <rect x="90" height="50" width="10" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
+                    <rect width="90" height="50" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                    <rect x="90" height="50" width="10" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 100 / 2}" width="${100*0.75}" height="${50}" visibility="hidden">
                         <div style="height: ${50}px" class="flex-container">
                             <div width="${100 * 0.75}" class="symbol-text-element">
@@ -124,12 +126,14 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 </g>`
             },
             annotations: [{
-                content: annotation
+                content: annotation,
+                
             }],
             style: {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 100,
             width: 210
@@ -147,8 +151,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect x="0" y="0" width="100" height="50" fill="none" stroke-width="0"/>
-                    <rect width="100" height="40" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
-                    <rect y="40" height="10" width="100" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
+                    <rect width="100" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                    <rect y="40" height="10" width="100" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 100 / 2}" y="-5" width="${100*0.75}" height="${50}" visibility="hidden">
                         <div style="height: ${50}px" class="flex-container">
                             <div width="${100 * 0.75}" class="symbol-text-element">
@@ -165,6 +169,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 100,
             width: 210
@@ -182,8 +187,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect x="0" y="0" height="50" width="100" fill="transparent" stroke-width="0"/>
-                    <rect width="90" height="40" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
-                    <rect x="10" y="10" height="40" width="90"  fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
+                    <rect width="90" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                    <rect x="10" y="10" height="40" width="90"  fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 100 / 2}" width="${100*0.75}" height="${50}" visibility="hidden">
                         <div style="height: ${50}px" class="flex-container">
                             <div width="${100 * 0.75}" class="symbol-text-element">
@@ -201,6 +206,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 100,
             width: 210
@@ -235,6 +241,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     italic: true
                 }
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 30,
             width: 100
         };
@@ -287,6 +294,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: personPort1
         };
     }
@@ -338,6 +346,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: personPort2
         }
     }
@@ -383,6 +392,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts
         }
     }
@@ -397,7 +407,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
-                    <rect vector-effect="non-scaling-stroke" width="575" height="150" stroke="black" fill="white" stroke-width="1" />
+                    <rect vector-effect="non-scaling-stroke" width="575" height="150" stroke="black" fill="transparent" stroke-width="1" />
                     <rect x="25" y="25" width="200" height="100" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
                     <foreignObject class="symbol-text-container" x="${0.11 * 575}" width="${100}" height="${150}" visibility="hidden">
                         <div style="height: ${150}px" class="flex-container">
@@ -453,6 +463,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 width: 4,
                 height: 4
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate
         }
     }
 
@@ -467,7 +478,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2,2)">
                         <rect height="100" width="100" fill="transparent" stroke-width="0"/>
-                        <rect x="${100 /(Math.sqrt(2)*2)}" y="${-100 / (Math.sqrt(2)*2)}" width="${100 / Math.sqrt(2)}" height="${100 / Math.sqrt(2)}" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" transform="rotate(45)"/>
+                        <rect x="${100 /(Math.sqrt(2)*2)}" y="${-100 / (Math.sqrt(2)*2)}" width="${100 / Math.sqrt(2)}" height="${100 / Math.sqrt(2)}" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" transform="rotate(45)"/>
                         <foreignObject class="symbol-text-container" x="${0.25 * 100 / 2}" width="${100*0.75}" height="${100}" visibility="hidden">
                         <div style="height: ${100}px" class="flex-container">
                             <div width="${100 * 0.75}" class="symbol-text-element">
@@ -485,6 +496,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 120,
             width: 120
@@ -520,6 +532,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 fill: 'none',
                 fontSize: 10
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: (annotation.ports !== undefined)?annotation.ports:null,
             height: annotation.radius * 2,
             width: annotation.radius * 2,
@@ -541,8 +554,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g transfrom="translate(2,2)">
                     <rect height="120" width="120" stroke-width="0" fill="transparent" />
-                    <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" d = "M 0 0 L 0 120 L 120 120 L 120 20 L 100 0 L 0 0"/>
-                    <polygon vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" points="100,0 100,20 120,20"/>
+                    <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d = "M 0 0 L 0 120 L 120 120 L 120 20 L 100 0 L 0 0"/>
+                    <polygon vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" points="100,0 100,20 120,20"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 120 / 2}" width="${120*0.75}" height="${120}" visibility="hidden">
                         <div style="height: ${120}px" class="flex-container">
                             <div width="${120 * 0.75}" class="symbol-text-element">
@@ -552,6 +565,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     </foreignObject>
                 </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 120,
             width: 120
         }
@@ -573,7 +587,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect height="250" width="350" fill="transparent" stroke-width="0"/> 
-                    <path fill="white" stroke="black" stroke-width="1" vector-effect="non-scaling-stroke" d="M 0 0 L 350 0 L 350 200 L 120 200 L 100 250 L 100 200 L 0 200 L 0 0"/>
+                    <path fill="transparent" stroke="black" stroke-width="1" vector-effect="non-scaling-stroke" d="M 0 0 L 350 0 L 350 200 L 120 200 L 100 250 L 100 200 L 0 200 L 0 0"/>
                     <foreignObject class="symbol-text-container" x="${0.25 * 350 / 2}" width="${350*0.75}" height="${250}" visibility="hidden">
                     <div style="height: ${250}px" class="flex-container">
                         <div width="${350 * 0.75}" class="symbol-text-element">
@@ -583,7 +597,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 </foreignObject>        
                 </g>`
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 250,
             width: 350
         }
@@ -595,7 +609,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
         let shapeData;
         for (let i = 0; i < columnNo; i++) {
             shapeData += `<g transform="translate(${100*i})">
-            <rect vector-effect="non-scaling-stroke" fill="white" stroke-width="1" stroke="black" height="100" width="100"/>
+            <rect vector-effect="non-scaling-stroke" fill="transparent" stroke-width="1" stroke="black" height="100" width="100"/>
             <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 0 50 L 100 50"/>
             <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="30">Title</tspan></text>
             <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="80">Value</tspan></text> 
@@ -628,7 +642,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                             ${shapeData}
                         </g>`
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 100,
             width: 100 * columnNo
         }
@@ -645,7 +659,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
         let rightArrow = `<g  transform="translate(2, 2)">
                 <g transform="rotate(${angle}) translate(${x},${y})">
                 <rect height="70" width="200" fill="transparent" stroke-width="0"/>
-                <path vector-effect="non-scaling-stroke" fill="white" stroke="black" stroke-width="1" d="M 0 15 L 175 15 L 175 0 L 200 35 L 175 70 L 175 55 L 0 55 L 0 15"/>
+                <path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 0 15 L 175 15 L 175 0 L 200 35 L 175 70 L 175 55 L 0 55 L 0 15"/>
                 </g>
                 <foreignObject class="symbol-text-container" x="${0.25 * 200 / 2}" width="${200*0.75}" height="${70}" visibility="hidden">
                 <div style="height: ${70}px" class="flex-container">
@@ -669,6 +683,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: rightArrow
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 70,
             width: 200
         }
@@ -685,7 +700,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: `<g transform="translate(2, 2)">
                     <g>
                         <rect height="90" width="500" fill="none" stroke-width="0"/>
-                        <path vector-effect="non-scaling-stroke" fill="white" stroke="black" stroke-width="1" d="M 0 45 L 50 0 L 50 20 L 450 20 L 450 0 L 500 45 L 450 90 L 450 70 L 50 70 L 50 90 L 0 45"/>
+                        <path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 0 45 L 50 0 L 50 20 L 450 20 L 450 0 L 500 45 L 450 90 L 450 70 L 50 70 L 50 90 L 0 45"/>
                         <foreignObject class="symbol-text-container" x="${0.25 * 500 / 2}" width="${500*0.75}" height="${90}" visibility="hidden">
                         <div style="height: ${90}px" class="flex-container">
                             <div width="${500 * 0.75}" class="symbol-text-element">
@@ -700,6 +715,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             annotations: [{
                 content: annotation
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 90,
             width: 500
         }
@@ -715,7 +731,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
-                    <g fill="white">
+                    <g fill="transparent">
                         <rect height="50" width="550" fill="none" strole-width="0"/>
                         <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 25 0 L 525 0 L 525 50 L 25 50 L 25 0"/>
                         <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" cx="25" cy="25" r="25" />
@@ -734,6 +750,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             annotations: [{
                 content: annotation
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 550
         }
@@ -765,7 +782,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
 
             targetPoint: {
                 x: 400, y: 400
-            }
+            },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate
         }
     }
 
@@ -796,7 +814,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                         top: 20
                     }
                 }
-            ]
+            ],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate
         }
     }
 
@@ -824,7 +843,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     content: annotation,
                     offset: {x: 0.5, y: 0.14},
                 }
-            ]
+            ],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate
         };
     }
 
@@ -839,7 +859,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect height="30" width="320" fill="transparent" stroke-width="0"/>
-                    <rect x="0" y="0" vector-effect="non-scaling-stroke" height="30" width="20" stroke="black" stroke-width="1" fill="white"/>
+                    <rect x="0" y="0" vector-effect="non-scaling-stroke" height="30" width="20" stroke="black" stroke-width="1" fill="transparent"/>
                     <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" stroke-dashArray="10 5" fill="transparent" d = "M 20 15 L 320 15"/>
                     <foreignObject class="symbol-text-container" x="${0.03 * 320}" width="${320*0.75}" height="${30}" visibility="hidden">
                     <div style="height: ${30}px" class="flex-container">
@@ -854,6 +874,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: annotation,
                 offset: {x: 0.03, y: 0.5}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 450
         }
@@ -881,7 +902,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
 
             ports: annotation.ports,
             annotations : annotation.content, 
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.OutConnect & ~ej.diagrams.NodeConstraints.Resize | constraint, 
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.OutConnect & ~ej.diagrams.NodeConstraints.Resize | constraint & ~ej.diagrams.NodeConstraints.Rotate, 
             height: 30,
             width: annotation.length
         }
@@ -909,7 +930,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
 
             ports: annotation.ports,
             annotations : annotation.content, 
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.OutConnect & ~ej.diagrams.NodeConstraints.Resize | constraint, 
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.OutConnect & ~ej.diagrams.NodeConstraints.Resize | constraint & ~ej.diagrams.NodeConstraints.Rotate, 
             height: annotation.length,
             width: 30
         }
@@ -930,7 +951,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     </g>`
             },
 
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect & ~ej.diagrams.NodeConstraints.OutConnect,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.InConnect & ~ej.diagrams.NodeConstraints.OutConnect & ~ej.diagrams.NodeConstraints.Rotate,
             annotations: annotation,
             height: 600,
             width: 600
@@ -953,6 +974,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d="M 30 0 A 15 20 0 0 0 15 20 L 15 50 A 15 10 0 0 1 0 60 A 15 10 0 0 1 15 70 L 15 100 A 15 20 0 0 0 30 120"/>
                 </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 120,
             width: 40
         };
@@ -973,6 +995,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d="M 0 0 A 15 20 0 0 1 15 20 L 15 50 A 15 10 0 0 0 30 60 A 15 10 0 0 0 15 70 L 15 100 A 15 20 0 0 1 0 120" />
                 </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 120,
             width: 40
         };
@@ -991,8 +1014,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                         <rect x = "0" y = "0" vector-effect="non-scaling-stroke" height="90" width="170" stroke="black" stroke-dasharray="8 4" stroke-width="1" fill="Transparent"/>
-                        <rect x="30" y="15" width="100" height="50" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
-                        <rect x="40" y="25" height="50" width="100"  fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
+                        <rect x="30" y="15" width="100" height="50" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                        <rect x="40" y="25" height="50" width="100"  fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
                         <foreignObject class="symbol-text-container" x="${0.25 * 170 / 2}" width="${170*0.75}" height="${90}" visibility="hidden">
                         <div style="height: ${90}px" class="flex-container">
                             <div width="${170 * 0.75}" class="symbol-text-element">
@@ -1002,6 +1025,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                         </foreignObject>   
                     </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 80,
             width: 160
@@ -1035,7 +1059,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 200
         };
@@ -1068,7 +1092,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 200
         };
@@ -1101,7 +1125,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 200,
             width: 50
         };
@@ -1134,7 +1158,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             style: {
                 fontSize: 10
             },
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 200,
             width: 50
         };
@@ -1153,6 +1177,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 '<Path vector-effect="non-scaling-stroke" stroke="black", fill="url(#Pattern3)" stroke-width="1" d="M 0 30 L 5 35 L 70 0 L 65 0 L 0 30">'+
                 '</g>'
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             width: 500,
             height: 200   
         };
@@ -1168,9 +1193,9 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
-                        <rect vector-effect="non-scaling-stroke" x="0" y="0" height="600" width="300" fill="white" stroke="black" stroke-width="2" />
-                        <rect vector-effect="non-scaling-stroke" x="25" y="25" height="250" width="250" fill="white" stroke="black" stroke-width="1" />
-                        <rect vector-effect="non-scaling-stroke" x="25" y="325" height="250" width="250" fill="white" stroke="black" stroke-width="1" />
+                        <rect vector-effect="non-scaling-stroke" x="0" y="0" height="600" width="300" fill="transparent" stroke="black" stroke-width="2" />
+                        <rect vector-effect="non-scaling-stroke" x="25" y="25" height="250" width="250" fill="transparent" stroke="black" stroke-width="1" />
+                        <rect vector-effect="non-scaling-stroke" x="25" y="325" height="250" width="250" fill="transparent" stroke="black" stroke-width="1" />
                         <foreignObject class="symbol-text-container" x="${0.25 * 300 / 2}" y="${50}"width="${300*0.75}" height="${100}" visibility="hidden">
                             <div style="height: ${100}px" class="flex-container">
                                 <div width="${350 * 0.75}" class="symbol-text-element">
@@ -1198,6 +1223,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 1},
                 margin: {top: 20}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 400,
             width: 200
         }
@@ -1214,9 +1240,9 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                         <rect height="600" width="600" stroke-width="0" fill="transparent" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="2" fill="white" cx="300" cy="300" r="300"/>
-                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="147.5" cy="300" rx="112.5" ry="220"/>
-                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="447.5" cy="300" rx="112.5" ry="220"/>
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="2" fill="transparent" cx="300" cy="300" r="300"/>
+                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="147.5" cy="300" rx="112.5" ry="220"/>
+                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="447.5" cy="300" rx="112.5" ry="220"/>
                         <foreignObject class="symbol-text-container" x="${0.15*600}" width="${200*0.75}" height="${600}" visibility="hidden">
                         <div style="height: ${600}px" class="flex-container">
                             <div width="${200 * 0.75}" class="symbol-text-element">
@@ -1244,6 +1270,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 1},
                 margin: {top: 20}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 400,
             width: 400
         }
@@ -1259,11 +1286,12 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
-                        <rect vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" height="150" width="100"/>
-                        <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" d = "M 20 30 L 50 80 L 72 30 M 50 80 L 50 130 M 85 40 A 10 10 0 1 0 50 25"/>
+                        <rect vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" height="150" width="100"/>
+                        <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d = "M 20 30 L 50 80 L 72 30 M 50 80 L 50 130 M 85 40 A 10 10 0 1 0 50 25"/>
                         <polygon vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="black" points="45,25 55,25 50,35"/>   
                     </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 150,
             width: 100
@@ -1281,17 +1309,17 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                         <rect height="710" width="900" stroke-width="0" fill="transparent" />
-                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="355" ry="355" rx="450"/> 
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="125" cy="355" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="350" cy="355" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="560" cy="370" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="775" cy="355" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="130" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="170" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="580" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="540" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="655" cy="180" r="100" />
-                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="675" cy="540" r="100" />
+                        <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="355" ry="355" rx="450"/> 
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="125" cy="355" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="350" cy="355" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="560" cy="370" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="775" cy="355" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="130" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="245" cy="170" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="580" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="245" cy="540" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="655" cy="180" r="100" />
+                        <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="675" cy="540" r="100" />
                     </g>`
             },
 
@@ -1340,6 +1368,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 1},
                 margin: {top: 20}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 355,
             width: 450
         }
@@ -1356,17 +1385,17 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect height="710" width="900" stroke-width="0" fill="transparent" />
-                    <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="355" ry="355" rx="450"/> 
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="125" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="350" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="560" cy="370" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="775" cy="355" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="130" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="170" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="450" cy="580" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="245" cy="540" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="655" cy="180" r="100" />
-                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="white" cx="675" cy="540" r="100" />
+                    <ellipse vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="355" ry="355" rx="450"/> 
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="125" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="350" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="560" cy="370" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="775" cy="355" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="130" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="245" cy="170" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="450" cy="580" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="245" cy="540" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="655" cy="180" r="100" />
+                    <circle vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" cx="675" cy="540" r="100" />
                 </g>`
             },
 
@@ -1414,6 +1443,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: 'R',
                 offset: {x: 0.85, y: 1},
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 355,
             width: 450
         }
@@ -1433,7 +1463,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 type: 'Native',
                 content: `<g  transform="translate(2, 2)">
                     <rect x = "0" y = "0" vector-effect="non-scaling-stroke" height="80" width="160" stroke="black" stroke-dasharray="8 4" stroke-width="1" fill="transparent"/>
-                    <rect x="30" y="20" width="100" height="40" fill="white" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+                    <rect x="30" y="20" width="100" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
                     <foreignObject class="symbol-text-container" x="${0.25 * 160 / 2}" width="${160 * 0.75}" height="${80}" visibility="hidden">
                     <div style="height: ${80}px" class="flex-container">
                         <div width="${0.75 * 160}" class="symbol-text-element">
@@ -1443,6 +1473,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     </foreignObject> 
                     </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 80,
             width: 160
@@ -1476,6 +1507,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 1},
                 margin: {top: 10}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 200
         }
@@ -1508,6 +1540,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 1},
                 margin: {top: 10}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 200
         }
@@ -1540,6 +1573,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 1, y: 0.5},
                 margin: {left: 30}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 100,
             width: 100
         }
@@ -1572,6 +1606,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0, y: 0.5},
                 margin: {right: 30}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 100,
             width: 100
         }
@@ -1611,7 +1646,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: '2',
                 offset: {x: 0.55, y: 1}
             }],
-            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.ResizeEast | ej.diagrams.NodeConstraints.ResizeWest, 
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Resize | ej.diagrams.NodeConstraints.ResizeEast | ej.diagrams.NodeConstraints.ResizeWest & ~ej.diagrams.NodeConstraints.Rotate, 
             height: 50,
             width: 600
         }
@@ -1633,6 +1668,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     <circle vector-effect="non-scaling-stroke" stroke-width="1" fill="black" stroke="black" cx="60" cy="45" r="3.5"/>
                 </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             ports: rectPorts,
             height: 50,
             width: 100
@@ -1655,6 +1691,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             annotations: [{
                 content: annotation
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 80,
             width: 35.56
         };
@@ -1674,6 +1711,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     <path d="M 0 4, S 2.5 1.5, 5 4 M 5 4, S 7.5 6.5, 10 4 M 0 6, S 2.5 3.5, 5 6 M 5 6, S 7.5 8.5, 10 6" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none"/>
                     </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 50
         };
@@ -1693,6 +1731,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                     <path vector-effect="non-scaling-stroke" stroke="red" stroke-width="1" fill="none" d="M 0 0 L 10 10 M 0 10 L 10 0"/> 
                 </g>`
             },
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 50,
             width: 50
         };
@@ -1717,7 +1756,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 content: '1',
                 offset: {x: 0.5, y: 0.45}
             }],
-
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 60,
             width: 50
         };
@@ -1739,6 +1778,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             annotations: [{
                 content: 'Empty Container'
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 150,
             width: 700
         };
@@ -1762,6 +1802,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
                 offset: {x: 0.5, y: 0},
                 margin: {bottom: 10}
             }],
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             height: 200,
             width: 200
         };
@@ -1794,7 +1835,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             shape: {
                 type: 'Native',
                 content: `<g transform="translate(2,2)">
-                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="white"/>
+                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="transparent" />
                     <foreignObject class="symbol-text-container" x="${0.25 * width / 2}" width="${width*0.75}" height="${height}" visibility="hidden">
                         <div style="height: ${height}px" class="flex-container">
                             <div width="${width * 0.75}" class="symbol-text-element">
@@ -1807,6 +1848,7 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             width: width,
             height: height,
             ports: (annotation.ports !== undefined)?annotation.ports:rectPorts,
+            constraints: ej.diagrams.NodeConstraints.Default & ~ej.diagrams.NodeConstraints.Rotate,
             style: {
                 ...annotation.style,
                 fill: 'white',

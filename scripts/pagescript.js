@@ -877,6 +877,10 @@ function openTheoryTab() {
         closeModelPage(commPages[i]);
     }
 }
+
+function showHideDialog() {
+    alert('Muji');
+}
 // Open sub model function
     // Create a opened nested list from the model
     // Make the model a list arrow button
