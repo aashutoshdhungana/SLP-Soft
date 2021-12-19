@@ -2162,7 +2162,8 @@ function getMenuItems(shapeName) {
 }
 
 function onOpenContextMenu(args) {
-    //Check if the right click is in a node
+    // check if node
+        // mapping function (nodeId) => menuItemsId
     let menuItems = getMenuItems('personShapes').list
     clearContextMenu();
     addToContextMenu(menuItems);
