@@ -295,16 +295,16 @@ for (let i = 0; i < symbolPalleteSymbols.length; i++) {
     let text = textSpan.innerHTML;
     let foreignElement = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
     foreignElement.setAttribute('x', '70');
-    foreignElement.setAttribute('y', '5');
+    foreignElement.setAttribute('y', '0');
     foreignElement.setAttribute('height', '24px');
-    foreignElement.setAttribute('width', '180');
+    foreignElement.setAttribute('width', '180px');
 
     let titleDiv = document.createElement('div');
     titleDiv.style.height = '24px';
     titleDiv.style.width = '180px';
     titleDiv.style.fontSize = '12px';
     titleDiv.style.fontWeight = 'bold';
-    titleDiv.style.lineHeight = '100%';
+    titleDiv.style.lineHeight = '13px';
     titleDiv.innerHTML = text;
     foreignElement.appendChild(titleDiv);
 

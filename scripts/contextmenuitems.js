@@ -2162,11 +2162,17 @@ function getMenuItems(shapeName) {
 }
 
 function onOpenContextMenu(args) {
-    // check if node
-        // mapping function (nodeId) => menuItemsId
-    let menuItems = getMenuItems('personShapes').list
-    clearContextMenu();
-    addToContextMenu(menuItems);
+    if (diagram.selectedItems.nodes.length)
+    {
+        let menuItems = getMenuItems(diagram.selectedItems.nodes[0].properties.addInfo[0].menuId).list
+        clearContextMenu();
+        addToContextMenu(menuItems);
+    }
+
+    else {
+        clearContextMenu();
+        addToContextMenu(getMenuItems('fundamentalTheory').list);
+    }
 }
 
 function clearContextMenu() {
@@ -2287,3 +2293,6 @@ function closeSubListMenu() {
 // -- This function takes the id of the node and returns the menulist
 // -- Map ids to the list
 // -- multiple ids have same list
+function mapIdToMenuItem() {
+    
+}

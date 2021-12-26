@@ -275,7 +275,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             id,
             addInfo: [{
                 title,
-                toolTip
+                toolTip,
+                menuId: 'personShapes'
             }],
             shape: {
                 type: 'Native',
