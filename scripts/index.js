@@ -295,13 +295,13 @@ for (let i = 0; i < symbolPalleteSymbols.length; i++) {
     let text = textSpan.innerHTML;
     let foreignElement = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
     foreignElement.setAttribute('x', '70');
-    foreignElement.setAttribute('y', '0');
-    foreignElement.setAttribute('height', '24px');
-    foreignElement.setAttribute('width', '180px');
+    foreignElement.setAttribute('y', '5');
+    foreignElement.setAttribute('height', '26px');
+    foreignElement.setAttribute('width', '200px');
 
     let titleDiv = document.createElement('div');
-    titleDiv.style.height = '24px';
-    titleDiv.style.width = '180px';
+    titleDiv.style.height = '26px';
+    titleDiv.style.width = '200px';
     titleDiv.style.fontSize = '12px';
     titleDiv.style.fontWeight = 'bold';
     titleDiv.style.lineHeight = '13px';
@@ -310,14 +310,14 @@ for (let i = 0; i < symbolPalleteSymbols.length; i++) {
 
     let toolTipElement = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
     toolTipElement.setAttribute('x', '70');
-    toolTipElement.setAttribute('y', '30');
-    toolTipElement.setAttribute('width', '180')
-    toolTipElement.setAttribute('height', '40')
+    toolTipElement.setAttribute('y', '35');
+    toolTipElement.setAttribute('width', '200px')
+    toolTipElement.setAttribute('height', '40px')
     let toolTipDiv = document.createElement('div');
     toolTipDiv.style.height = '40px';
-    toolTipDiv.style.width = '180px';
+    toolTipDiv.style.width = '200px';
     toolTipDiv.style.fontSize = '12px';
-    toolTipDiv.style.lineHeight = '95%';
+    toolTipDiv.style.lineHeight = '13px';
     toolTipDiv.innerHTML = toolTip;
     toolTipElement.appendChild(toolTipDiv);
     titleText.parentElement.appendChild(foreignElement);

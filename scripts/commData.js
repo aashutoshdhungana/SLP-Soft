@@ -60,12 +60,12 @@ let analysisData = [{
     toolTip: 'Problem Statement as Entity'
 }, {
     id: 'principle1',
-    title: 'Principle',
+    title: 'Main Set of Principles',
     annotation: 'Principle',
     toolTip: 'Represent The Main Set of Principles'
 }, {
     id: 'principle2',
-    title: 'Principle',
+    title: 'Sub Set of Principles',
     annotation: 'Principle',
     toolTip: 'Principle a Subset of Principles'
 }, {
