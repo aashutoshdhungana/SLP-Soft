@@ -5,148 +5,177 @@ let theoryData = [{
     id: 'theory',
     title: 'Theory',
     annotation: 'Theory',
+    menuId: 'thoery',
     toolTip: 'Identify a Theory'
 }, {
     id: 'theorem',
     title: 'Theorem',
     annotation: 'Theorem',
+    menuId: 'theorem',
     toolTip: 'Identify a Theorem'
 }, {
     id: 'communicationTheory',
     title: 'Communication Theory',
     annotation: 'Communication Theory',
+    menuId: 'theory',
     toolTip: 'Identify The Communication Theory'
 }, {
     id: 'informationTheory',
     title: 'Information Theory',
     annotation: 'Information Theory',
+    menuId: 'theory',
     toolTip: 'Identify a Information Theory'
 }, {
     id: 'instrumentationTheory',
     title: 'Instrumentation Theory',
     annotation: 'Instrumentation Theory',
+    menuId: 'theory',
     toolTip: 'Identify the Instrumentation Theory'
 }, {
     id: 'educationTheory',
     title: 'Education Theory',
     annotation: 'Education Theory',
+    menuId: 'theory',
     toolTip: 'Identify The Education Theory'
 }, {
     id: 'powerTheorem',
     title: 'Power Theorem',
     annotation: 'Power Theorem',
+    menuId: 'theory',
     toolTip: 'Identify The Power Theorem'
 }, {
     id: 'marketingTheory',
     title: 'Marketing Theory',
     annotation: 'Marketing Theory',
+    menuId: 'theory',
     toolTip: 'Identify The Marketing Theory',
 }, {
     id: 'exchangeSystemTheory',
     title: 'Exchange System Theory',
     annotation: 'Exchange System Theory',
+    menuId: 'theory',
     toolTip: 'Identify The Exchange System Theory'
 }, {
     id: 'gammingTheory',
     title: 'Gamming Theory',
     annotation: 'Gamming Theory',
+    menuId: 'theory',
     toolTip: 'Identify Gamming Theory'
 }, {
-    id: 'workTheorem',
-    title: 'Work Theorem',
-    annotation: 'Work Theorem',
-    toolTip: 'Identify The Work Theorem'
+    id: 'workTheory',
+    title: 'Work Theory',
+    annotation: 'Work Theory',
+    menuId: 'theory',
+    toolTip: 'Identify The Work Theory'
 }, {
     id: 'reproductionTheory',
     title: 'Reproduction Theory',
     annotation: 'Reproduction Theory',
+    menuId: 'theory',
     toolTip: 'Identify The Reproduction Theory'
 }, {
     id: 'utilizationTheory',
     title: 'Utilization Theory',
     annotation: 'Utilizatin Theory',
+    menuId: 'theory',
     toolTip: 'Identify Our Utilization Theory'
 }, {
     id: 't',
     title: 'T',
+    menuId: 'theory',
     annotation: 'T',
     toolTip: 'Identify a Theory'
 }, {
     id: 'theorem#',
     title: 'Theorem #',
     annotation: 'Theorem #',
+    menuId: 'theorem',
     toolTip: 'Identify a Theorem'
 }, {
     id: 'th[n]',
     title: 'Th[n]',
     annotation: 'Thn',
+    menuId: 'theorem',
     toolTip: 'Identify a Theorem'
 }, {
     id: 'communicationTheory1',
     title: 'Communication Theory',
     annotation: 'Kt',
+    menuId: 'theory',
     toolTip: 'Identify The Communication Theory'
 }, {
     id: 'uT',
     title: 'UT',
     annotation: 'UT',
+    menuId: 'theory',
     toolTip: 'Identify Our Utilization Theory'
 }, {
     id: 'interpretationFunction',
     title: 'Interpretation Function',
     annotation: 'Interpret',
+    menuId: 'empty',
     toolTip: 'Identify The Interpretation Function'
 }, {
     id: 'interpretationFunction1',
     title: 'Interpretation Funciton',
     annotation: 'Int{ }',
+    menuId: 'empty',
     toolTip: 'Identify The Interpretation Function' 
 }, {
     id: 'applyTheory',
     title: 'Apply Theory',
     annotation: 'Apply',
+    menuId: 'theory',
     toolTip: 'Theory Application Function'
 }, {
     id: 'applyTheory1',
     title: 'Apply Theory',
     annotation: 'Tr{ }',
+    menuId: 'theory',
     toolTip: 'Theory Application Function'
 }, {
     id: 'presentedTheory',
     title: 'Presented Theory',
     annotation: 'Presented Theory',
+    menuId: 'theory',
     toolTip: 'Identify a Presented Theory'
 }, {
     id: 'interpretedTheory',
     title: 'Interpreted Theory',
     annotation: 'Interpreted Theory',
+    menuId: 'theory',
     toolTip: 'Identify an Interpreted Thoery'
 }, {
     id: 'presentedTheory1',
     title: 'Presented Theory',
     annotation: "A'",
+    menuId: 'theory',
     toolTip: 'Identify a Presented Theory'
 }, {
     id: 'interpretedTheory1',
     title: 'Interpreted Theory',
     annotation: 'A',
+    menuId: 'theory',
     toolTip: 'Identify an Intepreted Thoery'
 }, {
     id: 'reference',
     title: 'Reference',
     annotation: 'Need new Shape',
+    menuId: 'reference',
     toolTip: 'Identify The Given Reference',
     type: 'Reference'
 }, {
     id: 'reference1',
     title: 'Reference',
     annotation: 'Need new Shape',
+    menuId: 'reference',
     toolTip: 'Identify The Given Reference',
     type: 'Reference1'
 }, {
     id: 'characteristicsTh',
     title: 'Characteristics',
     annotation: 'Theory Characteristics',
+    menuId: 'theoryCharacteristic',
     toolTip: 'Characteristic of Theory'
 }, {
     id: 'groupTheoryVertical',
@@ -180,6 +209,7 @@ let theoryData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities',
 }, {
     id: 'continuity1',
@@ -190,11 +220,13 @@ let theoryData = [{
         ports: []
     },
     toolTip: 'Show Continuity of Entity',
+    menuId: 'empty',
     type: 'Continuity'
 }, {
     id: 'linkednodeTH',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -207,52 +239,61 @@ let systemData = [{
     title: 'Physical System',
     annotation: ['System'],
     toolTip: 'Identify a Person',
+    menuId: 'system',
     type: 'Person'
 }, {
     id: 'physicalSystem1',
     title: 'Physical System',
     annotation: ['System'],
     toolTip :'Identify a Person',
+    menuId: 'system',
     type: 'PersonNoFrame'
 }, {
     id: 's[n]',
     title: 'S[n]',
     annotation: ['Sn'],
     toolTip: 'Identify a Person',
+    menuId: 'system',
     type: 'Person'
 }, {
     id: 's[n]1',
     title: 'S[n]',
     annotation: ['Sn'],
     toolTip: 'Identify a Person',
+    menuId: 'system',
     type: 'PersonNoFrame'
 }, {
     id: 'x[n]',
     title: 'x[n]',
     annotation: ['Xn'],
     toolTip: 'Identify a Person',
+    menuId: 'system',
     type: 'Person'
 }, {
     id: 'x[n]1',
     title: 'x[n]',
     annotation: ['Xn'],
     toolTip: 'Identify a Person',
+    menuId: 'system',
     type: 'PersonNoFrame'
 }, {
     id: 'physicalSystem2',
     title: 'Physical System',
     annotation: 'System',
+    menuId: 'system',
     toolTip: 'Identify a Person'
 }, {
     id: 's',
     title: 'S',
     annotation: 'S',
+    menuId: 'system',
     toolTip: 'Identify a Person',
     type: 'StrokeRect'
 }, {
     id: 'S',
     title: 'S',
     annotation: 'S',
+    menuId: 'system',
     toolTip: 'Identify a Person',
     type: 'DottedOverlap'
 }, {
@@ -260,39 +301,46 @@ let systemData = [{
     title: 'Group Physical System',
     annotation: 'Change Shape',
     toolTip: 'Identify Group of Person',
+    menuId: 'groupSystem',
     type: 'PersonGroup' 
 }, {
     id: 'groupPhysicalSystem1',
     title: 'Group Physical System',
     annotation: 'Systems',
+    menuId: 'system',
     toolTip: 'Identify Group of Person',
     type: 'Overlap'
 }, {
     id: 'groupPhysicalSyste2',
     title: 'Group Physical System',
     annotation: 'Change shape',
+    menuId: 'system',
     toolTip: 'Identify Group of Person',
     type: 'DottedGroup'
 }, {
     id: 's[n]2',
     title: 'S[n]',
     annotation: 'Sn',
+    menuId: 'system',
     toolTip: 'Represents The Physical System',
 }, {
     id: 's[n]3',
     title: 'S[n]',
     annotation: 'Sn',
+    menuId: 'system',
     toolTip: 'Represents The Physical System',
     type: 'Text'
 }, {
     id: 'constantCharacteristics',
     title: 'Constant Characteristics',
     annotation: 'Constant Characteristics',
+    menuId: 'constantCharaceristic',
     toolTip: 'Physical System Constant Characteristics'
 }, {
     id: 'mobilitySystem',
     title: 'Mobility',
     toolTip: 'Identify Our Mobility',
+    menuId: 'system',
     type: 'mobility'
 }, {
     id: 'groupSystem',
@@ -326,6 +374,7 @@ let systemData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities'
 }, {
     id: 'continuity',
@@ -342,6 +391,7 @@ let systemData = [{
     id: 'linkedNodeSystem',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -353,86 +403,103 @@ let fundamentalData = [{
     id: 'fundamentalTheory',
     title: 'Fundamental Theory',
     annotation: 'Fundamental Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Theory'
 }, {
     id: 'fundamentalCommunication',
     title: 'Fundamental Commmunication',
     annotation: 'Fundamental Communication',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Communication Theory'
 }, {
     id: 'fundamentalInformationTheory',
     title: 'Fundamental Information Theory',
     annotation: 'Fundamental Information Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Information Theory'
 }, {
     id: 'fundamentalInstrumentationTheory',
     title: 'Fundamental Instrumentation Theory',
     annotation: 'Fundamental Instrumentation Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Instrumentation Theory'
 }, {
     id: 'fundamentalEducation',
     title: 'Fundamental Education Theory',
     annotation: 'Fundamental Education Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Education Theory'
 }, {
     id: 'fundamentalPower',
     title: 'Fundamental Power Theorem',
     annotation: 'Fundamental Power Theorem',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of The Power Theorem'
 }, {
     id: 'fundamentalMarketingTheory',
     title: 'Fundamental Marketing Theory',
     annotation: 'Fundamental Marketing Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamanetal of Theory of Marketing',
 }, {
     id: 'fundamentalExchangeSystemTheory',
     title: 'Fundamental Exchange System Theory',
     annotation: 'Fundamental Exchange System Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Exchange System Theory',
 }, {
     id: 'fundamentalGammingTheory',
     title: 'Fundamental Gamming Theory',
     annotation: 'Fundamental Gamming Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of The Gamming Theory'
 }, {
     id: 'fundamentalWorkTheory',
     title: 'Fundamental Work Theory',
     annotation: 'Fundamental Work Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Work Theory',
 }, {
     id: 'fundamentalReproductionTheory',
     title: 'Fundamental Reproduction Theory',
     annotation: 'Fundamental Reproduction Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental Reporoduction Theory',
 }, {
     id: 'fundamentalUtilizationTheoryFirst',
     title: 'Fundamental Reproduction Theory',
     annotation: 'Fundamental Reproduction Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of The Reproduction Theory'
 }, {
     id: 'fundamentalPresentedTheory',
     title: 'Fundamental Presented Theory',
     annotation: 'Fundamental Presented Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of a Presented Theory'
 }, {
     id: 'fundamentalInterpretedTheory',
     title: 'Fundamental Interpreted Theory',
     annotation: 'Fundamental Interpreted Theory',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of a Interpreted Theory'
 }, {
     id: 'fundamentalTheory1',
     title: 'Fundamental Theory',
     annotation: 'fT',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental Theory'
 }, {
     id: 'fundamentalCommunicationTheory1',
     title: 'Fundamental Communication Theory',
     annotation: 'fKT',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Communication Theory'
 }, {
     id: 'fundamentalUtilizationTheory1',
     title: 'Fundamental Utilization Theory',
     annotation: 'fUT',
+    menuId: 'fundamentalTheory',
     toolTip: 'Identify The Fundamental of Our Utilization Theory'
 }, {
     id: 'groupFundamental',
@@ -466,11 +533,13 @@ let fundamentalData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities'
 }, {
     id: 'linkednodefundamental',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -857,125 +926,149 @@ let instrumentData = [{
     id: 'instrument',
     title: 'Instrument',
     annotation: 'Instrument',
+    menuId: 'instrument',
     toolTip: 'Identify an Instrument'
 }, {
     id: 'method',
     title: 'Method',
     annotation: 'Method',
+    menuId: 'method',
     toolTip: 'Identify a Method'
 }, {
     id: 'instrumentDerivative',
     title: 'Instrument Derivative',
     annotation: 'Instrument Derrivative',
+    menuId: 'derrivative',
     toolTip: 'Identify Derrivative of Method'
 }, {
     id: 'methodDerivative',
     title: 'Method Derivative',
     annotation: 'Method Derivative',
+    menuId: 'derrivative',
     toolTip: 'Identify Derivative of Method'
 }, {
     id: 'derrivative',
     title: 'Derrivative',
     annotation: 'Derrivative',
+    menuId: 'derrivative',
     toolTip: 'Identify a Derivative'
 }, {
     id: 'naturalElement',
     title: 'Natural Element',
     annotation: 'Natural Element',
+    menuId: 'naturalElement',
     toolTip: 'Identify a Natural Element'
 }, {
     id: 'inputElement',
     title: 'Input Element',
     annotation: 'Input Element',
+    menuId: 'inputElement',
     toolTip: 'Identify an Input Element'
 }, {
     id: 'exchangeableElement',
     title: 'Exchangeable Element',
     annotation: 'Exchangeable Element',
+    menuId: 'exchangableElement',
     toolTip: 'Identify an Exchangeable Element'
 }, {
     id: 'instrumentDerivativeFunction',
     title: 'Instrument Derivative Function',
     annotation: 'Instrument Derivative Function',
+    menuId: 'derrivative',
     toolTip: 'Identify Derivative Function of Instrument'
 }, {
     id: 'methodDerivativeFunction',
     title: 'Method Derivative Function',
     annotation: 'Method Derivative Function',
+    menuId: 'derrivative',
     toolTip: 'Identify Derivative Funciton of Method'
 }, {
     id: 'methodFunction',
     title: 'Method Function',
     annotation: 'Method Function',
+    menuId: 'methodFunction',
     toolTip: 'Identify Function of Method'
 }, {
     id: 'instrumentFunction',
     title: 'Instrument Function',
     annotation: 'Instrument Function',
+    menuId: 'methodFunction',
     toolTip: 'Identify Instrument Function'
 }, {
     id: 'instrumentServiceFunction',
     title: 'Instrument Service Function',
     annotation: 'Instrument Service Function',
+    menuId: 'methodFunction',
     toolTip: 'Identify Instrument Service Function'
 }, {
     id: 'serviceFunciton',
     title: 'Service Function',
     annotation: 'Service Function',
+    menuId: 'methodFunction',
     toolTip: 'Identify Service Function'
 }, {
     id: 'methodExecutedFunction',
     title: 'Method Executed Funciton',
     annotation: 'Method Executed Function',
+    menuId: 'methodFunction',
     toolTip: 'Identify Method Executed Function'
 }, {
     id: 'functionToInstrument',
     title: 'Function To Instrument',
     annotation: 'Function To Instrument',
+    menuId: 'methodFunction',
     toolTip: 'Identify Function to Instrument'
 }, {
     id: 'functionToMethod',
     title: 'Function To Method',
     annotation: 'Function To Method',
+    menuId: 'methodFunction',
     toolTip: 'Identify Function to Method'
 }, {
     id: 'ne',
     title: 'NE',
     annotation: 'NE',
+    menuId: 'naturalElement',
     toolTip: 'Identify Natural Element'
 }, {
     id: 'ie',
     title: 'IE',
     annotation: 'IE',
+    menuId: 'inputElement',
     toolTip: 'Identify Input Element'
 }, {
     id: 'dl/dT',
     title: 'dI/dT',
     annotation: 'dI/dT',
+    menuId: 'empty',
     toolTip: 'Identify Instrument Derivative'
 }, {
     id: 'naturalElement1',
     title: 'Natural Element',
     annotation: 'New Shape please',
     toolTip: 'Identify an Input Element',
+    menuId: 'naturalElement',
     type: 'Natural'
 }, {
     id: 'inputElements',
     title: 'Input Elements',
     annotation: 'Input Elements',
     toolTip: 'Identify Group Exchange Elements',
+    menuId: 'inputElement',
     type: 'Overlap'
 }, {
     id: 'exchangeElements',
     title: 'Exchange Elements',
     annotation: 'Exchange Elements',
     toolTip: 'Identify Group Exchange Elements',
+    menuId: 'exchangableElement',
     type: 'Overlap'
 }, {
     id: 'emptycontainerinsturment',
     title: 'Empty Container',
     annotation: 'Empty Container',
     toolTip: 'A Container to Add Part To',
+    menuId: 'emptyContainer',
     type: 'squareemptycontainer'
 }, {
     id: 'linkednodeinstrument',
@@ -1000,6 +1093,7 @@ let theoryFunctions = [{
             margin: {top: 20}
         }]
     },
+    menuId: 'functionSystem',
     toolTip: 'Represents Life',
     type: 'Circle'
 }, {
@@ -1007,6 +1101,7 @@ let theoryFunctions = [{
     title: 'Life',
     annotation: ['Existing Function Area', 'Added Function Area', 'Life'],
     toolTip: 'Represent The Functional System',
+    menuId: 'life',
     type: 'LifeCircle'
 }, {
     id: 'functionalSystem1',
@@ -1021,43 +1116,51 @@ let theoryFunctions = [{
         height: 400,
         width: 200
     },
+    menuId: 'functionSystem',
     toolTip: 'Represents Life'
 }, {
     id: 'lifeBox',
     title: 'Life',
     annotation: ['Existing Functions', 'Added Functions', 'Life'],
+    menuId: 'life',
     toolTip: 'Represent The Functional System',
     type: 'LifeBox'
 }, {
     id: 'existingFunction',
     title: 'Existing Function',
     annotation: 'Existing Function',
+    menuId: 'addedFunction',
     toolTip: 'Identify An Existing Funciton',
 }, {
     id: 'addedFunction',
     title: 'Added Function',
     annotation: 'Added Function',
+    menuId: 'addedFunction',
     toolTip: 'Identify An Added Function',
 }, {
     id: 'h(t)Function',
     title: 'h(t)',
     annotation: 'h(t)',
+    menuId: 'addedFunction',
     toolTip: 'Identidy an Existing Function',
 }, {
     id: 'u(t)function',
     title: 'u(t)',
     annotation: 'u(t)',
+    menuId: 'addedFunction',
     toolTip: 'Identify an Added Function',
 }, {
     id: 'existingFunction1',
     title: 'Existing Function',
     annotation: 'Existing Function',
     toolTip: 'Identify An Existing Function',
+    menuId: 'addedFunction',
     type: 'Ellipse'
 }, {
     id: 'addedFunction1',
     title: 'Added Function',
     annotation: 'Added Function',
+    menuId: 'addedFunction',
     toolTip: 'Identify An Added Function',
     type: 'Ellipse'
 }, {
@@ -1070,6 +1173,7 @@ let theoryFunctions = [{
             content: 'Existing Function'
         }]
     },
+    menuId: 'addedFunction',
     toolTip: 'Identify An Existing Function',
     type: 'Circle'
 }, {
@@ -1082,6 +1186,7 @@ let theoryFunctions = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'addedFunction',
     toolTip: 'Identify an Added Function',
     type: 'Circle'
 }, {
@@ -1094,6 +1199,7 @@ let theoryFunctions = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'addedFunction',
     toolTip: 'Identify An Existing Function',
     type: 'Circle'
 }, {
@@ -1106,6 +1212,7 @@ let theoryFunctions = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'addedFunction',
     toolTip: 'Identify An Added Function',
     type: 'Circle'
 }, {
@@ -1118,6 +1225,7 @@ let theoryFunctions = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'addedFunction',
     toolTip: 'Multi Inputs Added Function',
     type: 'Circle'
 }, {
@@ -1130,17 +1238,20 @@ let theoryFunctions = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'addedFunction',
     toolTip: 'Multi Input Added Function',
     type: 'Circle'
 }, {
     id: 'externalFunction',
     title: 'External Function',
     annotation: 'External Function',
+    menuId: 'addedFunction',
     toolTip: 'Identify An External Function'
 }, {
     id: 'stopFunction',
     title: 'Stop Function',
     annotation: 'Stop Function',
+    menuId: 'addedFunction',
     toolTip: 'Identify a Stop Function'
 }, {
     id: 'functionContainer',
@@ -1154,30 +1265,35 @@ let theoryFunctions = [{
         },
         ports: []
     },
+    menuId: 'addedFunction',
     toolTip: 'Identify A Function Container'
 }, {
     id: 'eFunction',
     title: 'eFunction',
     annotation: 'eFunction',
     toolTip: 'Identify An Existing Function',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'aFunction',
     title: 'aFunction',
     annotation: 'aFunction',
     toolTip: 'Identify An Added Function',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'h(t)',
     title: 'h(t)',
     annotation: 'h(t)',
     toolTip: 'Identify an Existing Function',
+    menuId: 'empty',
     type: 'text'
 }, {
     id: 'u(t)',
     title: 'u(t)',
     annotation: 'u(t)',
     toolTip: 'Identify an Added Function',
+    menuId: 'empty',
     type: 'text'
 }, {
     id: 'life1',
@@ -1190,12 +1306,14 @@ let theoryFunctions = [{
         fill: 'White'
     },
     toolTip: 'Life as a Function of Time',
+    menuId: 'life',
     type: 'Circle'
 }, {
     id: 'life2',
     title: 'Life',
     annotation: 'Life',
     toolTip: 'Life as a Function',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'L(t)',
@@ -1207,6 +1325,7 @@ let theoryFunctions = [{
         radius: 70,
         fill: 'White'
     },
+    menuId: 'l(t)',
     toolTip: 'Life as a Function of Time',
     type: 'Circle'
 }, {
@@ -1214,6 +1333,7 @@ let theoryFunctions = [{
     title: 'L(t)',
     annotation: 'L(t)',
     toolTip: 'Life as a Function of Time',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'groupFunctionTheory',
@@ -1247,6 +1367,7 @@ let theoryFunctions = [{
         height: 75,
         width: 50
     },
+    menuId: 'empty',
     toolTip: 'Use to Group or Add Entities',
 }, {
     id: 'continuityFunction',
@@ -1256,12 +1377,14 @@ let theoryFunctions = [{
         fill: 'transparent',
         ports: []
     },
+    menuId: 'empty',
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity',
 }, {
     id: 'linkednodefunciton',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion

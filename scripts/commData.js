@@ -7,82 +7,98 @@ let analysisData = [{
     id: 'principle',
     title: 'Principle',
     annotation: 'Principle',
+    menuId: 'principle',
     toolTip: 'Represent Actual Principle'
 }, {
     id: 'parentPrinciple',
     title: 'Parent Principle',
     annotation: 'Principle',
+    menuId: 'principle',
     toolTip: 'Represent Actual Principle'
 }, {
     id: 'referencerect',
     title: 'Reference',
     annotation: 'Reference',
+    menuId: 'reference',
     toolTip: 'Represent an Actual Reference'
 }, {
     id: 'sentenceAnalysis',
     title: 'Sentence Analysis',
     annotation: 'Sentence Analysis',
+    menuId: 'sentenceAnalysis',
     toolTip: 'Represent Actual Principle'
 }, {
     id: 'analysis',
     title: 'Analysis',
     annotation: 'Analysis',
+    menuId: 'sentenceAnalysis',
     toolTip: 'Represent Actual Analysis'
 }, {
     id: 'feedback',
     title: 'Feedback',
     annotation: 'Feedback',
+    menuId: 'feedback',
     toolTip: 'Represent a Feedback'
 }, {
     id: 'operatingPrinciple',
     title: 'Operating Principle',
     annotation: 'Principle',
+    menuId: 'operatingPrinciple',
     toolTip: 'Represent Actual Principle'
 }, {
     id: 'error',
     title: 'Error',
     annotation: 'Error',
+    menuId: 'error',
     toolTip: 'Represent an Actual Error'
 }, {
     id: 'compensator',
     title: 'Compensator',
     annotation: 'Compensator',
+    menuId: 'compensator',
     toolTip: 'Represent an Actual Compensator'
 }, {
     id: 'problem',
     title: 'Problem',
     annotation: 'Problem',
+    menuId: 'problem',
     toolTip: 'Represent an Actual Problem'
 }, {
     id: 'problemStatement',
     title: 'Problem Statement',
     annotation: 'Problem Statement',
+    menuId: 'problemStatement',
     toolTip: 'Problem Statement as Entity'
 }, {
     id: 'principle1',
     title: 'Main Set of Principles',
     annotation: 'Principle',
+    menuId: 'mainSetofPrinciple',
     toolTip: 'Represent The Main Set of Principles'
 }, {
     id: 'principle2',
     title: 'Sub Set of Principles',
     annotation: 'Principle',
+    menuId: 'subSetofPrinciple',
     toolTip: 'Principle a Subset of Principles'
 }, {
     id: 'analysisWindow',
     title: 'Analysis Window',
     annotation: 'Analysis Window',
+    menuId: 'analysisWindow',
     toolTip: 'Represents an Actual Analysis'
 }, {
     id: 'edfDiamond',
     title: 'ECF',
     annotation: 'ECF',
     toolTip: 'The Error Correction Function',
+    menuId: 'empty',
     type: 'ECF'
 }, {
     id: 'ecfRect',
     title: 'ECF',
     annotation: 'ECF',
+    menuId: 'ecf',
     toolTip: 'Enable Error Correction',
 }, {
     id: 'problemDevelopment',
@@ -101,21 +117,25 @@ let analysisData = [{
         fill: 'White'
     },
     toolTip: 'Problem Development From Error',
+    menuId: 'problemDevelopment',
     type: 'Circle'
 }, {
     id: 'principleAspect',
     title: 'Principle Aspect',
     annotation: 'Principle Aspect',
+    menuId: 'principleAspect',
     toolTip: 'Identify Aspect of a Principle'
 }, {
     id: 'redcrossanalysis',
     title: 'Red Cross',
     toolTip: 'Use to Cross Out Entity',
+    menuId: 'empty',
     type: 'redcross'
 }, {
     id: 'solutionanalysis',
     title: 'Solution',
     annotation: 'Analysis',
+    menuId: 'solution',
     toolTip: 'Represent an Actual Solution'
 }, {
     id: 'group4',
@@ -149,6 +169,7 @@ let analysisData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities',
 }, {
     id: 'continuity4',
@@ -157,42 +178,49 @@ let analysisData = [{
         strokeWidth: 1,
         strokeDashArray: '10 5'
     },
+    menuId: 'empty',
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
 }, {
     id: 'analyses',
     title: 'Analyses',
     annotation: 'Analyses',
+    menuId: 'sentenceAnalysis',
     toolTip: 'Represents a Group of Analysis',
     type: 'Overlap'
 }, {
     id: 'errors',
     title: 'Errors',
     annotation: 'Errors',
+    menuId: 'error',
     toolTip: 'Represent a Group of Error',
     type: 'Overlap'
 }, {
     id: 'problems',
     title: 'Problems',
     annotation: 'Problems',
+    menuId: 'problem',
     toolTip: 'Represents a Group of Problem',
     type: 'Overlap'
 }, {
     id: 'feedbacks',
     title: 'Feedbacks',
     annotation: 'Feedbacks',
+    menuId: 'feedback',
     toolTip: 'Represents a Group of Feedback',
     type: 'Overlap'
 }, {
     id: 'compensators',
     title: 'Compensators',
     annotation: 'Compenstors',
+    menuId: 'compensator',
     toolTip: 'Represent a Group of Feedback',
     type: 'Overlap'
 }, {
     id: 'solutionsanalysis',
     title: 'Solutions',
     annotation: 'Solutions',
+    menuId: 'solution',
     toolTip: 'Represent a Group of Solutions',
     type: 'Overlap'
 }];
@@ -206,58 +234,69 @@ let applicationRects = [{
     id: 'application',
     title: 'Application',
     annotation: 'Application',
+    menuId: 'application',
     toolTip: 'Represents an Actual Application'
 }, {
     id: 'a',
     title: 'A',
     annotation: 'A',
+    menuId: 'application',
     toolTip: 'Represents an Actual Application'
 }, {
     id: 'communicationFunction',
     title: 'Communication Function',
     annotation: 'Communication Function',
+    menuId: 'commFunction',
     toolTip: 'Function of Our Communication'
 }, {
     id: 'f(x)',
     title: 'f(x)',
     annotation: 'f(x)',
+    menuId: 'f(x)',
     toolTip: 'Function of Our Communication'
 }, {
     id: 'f()',
     title: 'f()',
     annotation: 'f()',
+    menuId: 'f(x)',
     toolTip: 'Function of Our Communication'
 }, {
     id: 'communicationResult',
     title: 'Communication Result',
     annotation: 'Communication Result',
+    menuId: 'commResult',
     toolTip: 'Result of an Application'
 }, {
     id: 'whatWeDo',
     title: 'What We Do',
     annotation: 'draw New Shape',
     toolTip: 'Represent Things That We Do',
+    menuId: 'entity',
     type: 'DualBox'
 }, {
     id: 'whatWeDo1',
     title: 'What We Do',
     annotation: ['Communication', 'Application', 'What We Do'],
+    menuId: 'entity',
     toolTip: 'What We Do as Entity',
     type: 'WhatWeDo'
 }, {
     id: 'action',
     title: 'Action',
     annotation: 'Action',
+    menuId: 'action',
     toolTip: 'An Action That We Take'
 }, {
     id: 'reason',
     title: 'Reason',
     annotation: 'Reason',
+    menuId: 'reason',
     toolTip: 'Reason For an Action'
 }, {
     id: 'work1234',
     title: 'Work',
     annotation: 'Work',
+    menuId: 'work',
     toolTip: 'Work That we Do'
 }, {
     id: 'application1',
@@ -270,12 +309,14 @@ let applicationRects = [{
     title: 'A',
     annotation: 'A',
     toolTip: 'Represent Application',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'communicationFunction1',
     title: 'Communication Function',
     annotation: 'communication function',
     toolTip: 'Represent Communication Function',
+    menuId: 'empty',
     type: 'Text'
 
 }, {
@@ -283,6 +324,7 @@ let applicationRects = [{
     title: 'f(x)',
     annotation: 'f(x)',
     toolTip: 'Represent Communication Function',
+    menuId: 'empty',
     type: 'Text'
 }, {
     id: 'commAppMixture',
@@ -295,6 +337,7 @@ let applicationRects = [{
         }],
         ports: rectPorts
     },
+    menuId: 'empty',
     toolTip: 'Communication Application Mixture',
     type: 'Circle'
 }, {
@@ -308,6 +351,7 @@ let applicationRects = [{
         }],
         ports: rectPorts
     },
+    menuId: 'empty',
     toolTip: 'Communication Application Mixture',
     type: 'Circle'
 }, {
@@ -318,11 +362,13 @@ let applicationRects = [{
         height: 120,
         width: 80
     },
+    menuId: 'commMix',
     toolTip: 'Multi Inputs Comm & App Mixture',
 }, {
     id: 'emptycontainer',
     title: 'Empty Container',
     toolTip: 'A Container to Add Part to',
+    menuId: 'emptyContainer',
     type: 'emptycontainer'
 }, {
     id: 'work',
@@ -335,42 +381,49 @@ let applicationRects = [{
         }],
         ports: rectPorts
     },
+    menuId: 'workinput',
     toolTip: 'People Work Together',
     type: 'Circle'
 }, {
     id: 'subFunction',
     title: 'Sub Function',
     annotation: 'Sub Communication Function',
+    menuId: 'subFunction',
     toolTip: 'Function Inside Function',
     type: 'Sub'
 }, {
     id: 'subApplication',
     title: 'Sub Application',
     annotation: 'Sub Application',
+    menuId: 'subApplication',
     toolTip: 'Application Inside Application',
     type: 'Sub'
 }, {
     id: 'subResult',
     title: 'Sub Result',
     annotation: 'Sub Result',
+    menuId: 'subResult',
     toolTip: 'Result Inside Result',
     type: 'Sub'
 }, {
     id: 'groupFunction',
     title: 'Group Function',
     annotation: 'Group Communication Function',
+    menuId: 'groupFunction',
     toolTip: 'Group Communication Function',
     type: 'Group'
 }, {
     id: 'groupApplication',
     title: 'Group Application',
     annotation: 'Group Application',
+    menuId: 'groupApplication',
     toolTip: 'Denote Group of Application',
     type: 'Group'
 }, {
     id: 'groupResult',
     title: 'Group Result',
     annotation: 'Group Communication Result',
+    menuId: 'groupResult',
     toolTip: 'Group Communication Result',
     type: 'Group'
 }, {
@@ -405,6 +458,7 @@ let applicationRects = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities',
 }, {
     id: 'continuityApplication',
@@ -413,6 +467,7 @@ let applicationRects = [{
         strokeWidth: 1,
         strokeDashArray: '10 5'
     },
+    menuId: 'empty',
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
 }];
@@ -426,11 +481,13 @@ let areaData = [{
     id: 'locationOfOperation',
     title: 'Location of Operation',
     annotation: 'Location',
+    menuId: 'location',
     toolTip: 'Identify Operation Location',
 }, {
     id: 'siteOfOperationRect',
     title: 'Site of Operation',
     annotation: 'Site',
+    menuId: 'location',
     toolTip: 'Identify Operation Site'
 }, {
     id: 'mainArea',
@@ -448,12 +505,14 @@ let areaData = [{
         height: 200,
         width: 800
     },
+    menuId: 'location',
     toolTip: 'Identify The Main Area',
 }, {
     id: 'siteOfOperation',
     title: 'Site of Operation',
     annotation: 'Site',
     toolTip: 'Identify a Site',
+    menuId: 'location',
     type: 'House'
 }, {
     id: 'workingareaAL',
@@ -465,6 +524,7 @@ let areaData = [{
             content: 'Working Area'
         }]
     },
+    menuId: 'location',
     toolTip: 'Identify a Working Area',
     type: 'Circle'
 }, {
@@ -477,12 +537,14 @@ let areaData = [{
             content: 'Locaiton'
         }]
     },
+    menuId: 'location',
     toolTip: 'Identify a Location',
     type: 'Circle'
 }, {
     id: 'mobilityAL',
     title: 'Mobility',
     toolTip: 'Movement of a Person',
+    menuId: 'empty',
     type: 'mobility'
 }];
 //#endregion
@@ -674,124 +736,145 @@ var personData = [{
     title: 'Person',
     annotation: ['Person Name', 'No Title'],
     toolTip: 'A Person Without Title',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'employee',
     title: 'Employeee',
     annotation: ['Person Name', 'Employee'],
     toolTip: 'A Person as Employee',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'manager',
     title: 'Manager',
     annotation: ['Person Name','Manager'],
     toolTip: 'A Person as Manager',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'teamLead',
     title: 'Team Lead',
     annotation: ['Person Name','Team Lead'],
     toolTip: 'A Person as Team Lead',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'customer',
     title: 'Customer',
     annotation: ['Person Name', 'Customer'],
     toolTip: 'A Person as Customer',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'client',
     title: 'Client',
     annotation: ['Person Name', 'Client'],
     toolTip: 'A Person as Client',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'contractor',
     title: 'Contractor',
     annotation: ['Person Name','Conractor'],
     toolTip: 'A Person as Contractor',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'salePerson',
     title: 'Sale Person',
     annotation: ['Person Name', 'Sale Rep'],
     toolTip: 'A Person as Sale Rep',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'servicePerson',
     title: 'Service Person',
     annotation: ['Person Name', 'Service Rep'],
     toolTip: 'A Person as Service Rep',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'supportPerson',
     title: 'Support Person',
     annotation: ['Person Name', 'Support Rep'],
     toolTip: 'A Person as Service Rep',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'testPerson',
     title: 'Test Person',
     annotation: ['Person Name', 'Test Person'],
     toolTip: 'A Person Who Conducts Test',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'inspector',
     title: 'Inspector',
     annotation: ['Person Name', 'Inspector'],
     toolTip: 'A Person as Inspector',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'agent',
     title: 'Agent',
     annotation: ['Person Name', 'Agent'],
     toolTip: 'A Person as Agent',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'user',
     title: 'User',
     annotation: ['Person Name','User'],
     toolTip: 'A person as a User',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'other',
     title: 'Other',
     annotation: ['Person Name', 'Other Title'],
     toolTip: 'Other Person Not Listed',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'personNoframe',
     title: 'Person',
     annotation: ['Person Name', 'No Title'],
     toolTip: 'Sketched Without Frame',
+    menuId: 'personShapes',
     type: 'PersonNoFrame'
 }, {
     id: 'personWithNumber',
     title: 'P[n]',
     annotation: ['Pn'],
     toolTip: 'Denote Person With Number',
+    menuId: 'personShapes',
     type: 'PersonNoFrame'
 }, {
     id: 'PersonWithNumberAndFrame123',
     title: 'x[n]',
     annotation: ['Xn'],
     toolTip: 'Denote Person With Number',
+    menuId: 'personShapes',
     type: 'Person'
 }, {
     id: 'groupOfPeople',
     title: 'Group of People',
     annotation: 'Group Name',
     toolTip: 'Represents a Group of People',
+    menuId: 'groupPeople',
     type: 'PersonGroup'
 }, {
     id: 'communicationHolder',
     title: 'Comunication Holder',
     annotation: 'Communication Holder',
+    menuId: 'communicationHolder',
     toolTip: 'Hold Person Communication'
 }, {
     id: 'externalCommunicationHolder',
     title: 'External Communication Holder',
     annotation: 'External Communication Holder',
+    menuId: 'communicationHolder',
     toolTip: 'Hold Person Communication'
 }, {
     id: 'communicationMixturePerson1',
@@ -825,6 +908,7 @@ var personData = [{
         height: 50,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Two Input Communication',
 }, {
     id: 'communicationMixturePerson2',
@@ -858,11 +942,13 @@ var personData = [{
         height: 50,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Multi Input Communication'
 }, {
     id: 'personAspect',
     title: 'Person Aspect',
     annotation: 'Person Aspect',
+    menuId: 'personAspect',
     toolTip: 'Identify Aspect of a Person'
 }, {
     id: 'groupPreson1',
@@ -896,8 +982,35 @@ var personData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities'
 }, {
+    id: 'commHolderGroup',
+    title: 'Comm Holder Group',
+    annotation: 'Communication Holder',
+    toolTip: 'Group of Communication Holder',
+    menuId: 'communicationHolder',
+    type: 'Overlap'
+}, {
+    id: 'externalCommHolderGroup',
+    title: 'External Comm Holder Group',
+    annotation: 'External Communication Holder',
+    toolTip: 'Group of External Communication Holder',
+    menuId: 'communicationHolder',
+    type: 'Overlap'
+}, {
+    id: 'coverPerson',
+    title: 'Cover',
+    toolTip: 'Use to Cover a Person',
+    menuId: 'cover',
+    type: 'cover'
+}, {
+    id: 'mobilityPerson',
+    title: 'Mobility',
+    toolTip: 'Movement of a Person',
+    menuId: 'personShapes',
+    type: 'mobility'
+},  {
     id: 'continuityPerson',
     title: 'Continuity',
     annotation: {
@@ -907,29 +1020,8 @@ var personData = [{
         ports: []
     },
     toolTip: 'Show Continuity of Entity',
+    menuId: 'empty',
     type: 'Continuity'
-}, {
-    id: 'commHolderGroup',
-    title: 'Comm Holder Group',
-    annotation: 'Communication Holder',
-    toolTip: 'Group of Communication Holder',
-    type: 'Overlap'
-}, {
-    id: 'externalCommHolderGroup',
-    title: 'External Comm Holder Group',
-    annotation: 'External Communication Holder',
-    toolTip: 'Group of External Communication Holder',
-    type: 'Overlap'
-}, {
-    id: 'coverPerson',
-    title: 'Cover',
-    toolTip: 'Use to Cover a Person',
-    type: 'cover'
-}, {
-    id: 'mobilityPerson',
-    title: 'Mobility',
-    toolTip: 'Movement of a Person',
-    type: 'mobility'
 }];
 //#endregion
 function getCommPerson() {
@@ -1411,108 +1503,129 @@ var communicationData = [{
     id: 'communicationEntity',
     title: 'Communication Entity',
     annotation: 'Communication',
+    menuId: 'communication',
     toolTip: 'Represents a Communication'
 
 }, {
     id: 'x',
     title: 'x',
     annotation: 'x',
+    menuId: 'communication',
     toolTip: 'Represent a Communication'
 }, {
     id: 'word',
     title: 'Word',
     annotation: 'Word',
+    menuId: 'word',
     toolTip: 'Represents an Actual Word'
 }, {
     id: 'sentence',
     title: 'Sentence',
     annotation: 'Sentence',
+    menuId: 'sentence',
     toolTip: 'Represents an Actual Sentence'
 }, {
     id: 'paragraph',
     title: 'Paragraph',
     annotation: 'Paragraph',
+    menuId: 'paragraph',
     toolTip: 'Represents an Actual Pragraph'
 }, {
     id: 'communicationElement',
     title: 'Communication Element',
     annotation: 'Communication Element',
+    menuId: 'communicationElement',
     toolTip: 'Represent a Communication Element'
 }, {
     id: 'communicationProcess',
     title: 'Communication Process',
     annotation: 'Communication Process',
+    menuId: 'commMix',
     toolTip: 'Represents a Process of Communication'
 },
 {
     id: 'information',
     title: 'Information',
     annotation: 'Information',
+    menuId: 'information',
     toolTip: 'Respresents an actual Information'
 }, {
     id: 'entity',
     title: 'Entity',
     annotation: 'Entity',
+    menuId: 'entity',
     toolTip: 'Represents an Actual Entity'
 }, {
     id: 'question',
     title: 'Question',
     annotation: 'Question',
+    menuId: 'question',
     toolTip: 'Represent an Actual Question'
 }, {
     id: 'answer',
     title: 'Answer',
     annotation: 'Answer',
+    menuId: 'answer',
     toolTip: 'Represents an Actual Sentence'
 }, {
     id: 'unkownEntity',
     title: 'Unknown Entity',
     annotation: 'Unknown Entity',
+    menuId: 'entity',
     toolTip: 'Represents an Unkown Entity'
 }, {
     id: 'blankEntity',
     title: 'Blank Entitiy',
     annotation: '?',
+    menuId: 'entity',
     toolTip: 'Existed Whether or Not'
 }, {
     id: 'function',
     title: 'Function',
     annotation: 'Function',
+    menuId: 'function',
     toolTip: 'Entity as Function'
 }, {
     id: 'aspect',
     title: 'Aspect',
     annotation: 'Aspect',
+    menuId: 'aspect',
     toolTip: 'Entity as Aspect'
 }, {
     id: 'test',
     title: 'Test',
     annotation: 'Test',
+    menuId: 'test',
     toolTip: 'Entity as Test'
 }, {
     id: 'functionStatus',
     title: 'Function Status',
     annotation: 'Function Status',
+    menuId: 'functionstatus',
     toolTip: 'Entity as Function Status'
 }, {
     id: 'entityUsage',
     title: 'Entity Usage',
     annotation: 'Entity Usage',
+    menuId: 'functionstatus',
     toolTip: 'Entity as Entity Usage'
 }, {
     id: 'picture',
     title: 'Picture',
     annotation: 'Picture',
+    menuId: 'picture',
     toolTip: 'Represents an actual Picture'
 }, {
     id: 'video',
     title: 'Video',
     annotation: 'Video',
+    menuId: 'video',
     toolTip: 'Represents an Actual Video'
 }, {
     id: 'audio',
     title: 'Audio',
     annotation: 'Audio',
+    menuId: 'audio',
     toolTip: 'Represents an actual Audio'
 }, {
     id: 'dictionary',
@@ -1526,6 +1639,7 @@ var communicationData = [{
             content: 'Dictonary'
         }]
     },
+    menuId: 'dictionary',
     toolTip: 'Represent a Dictionary of Words',
     type: 'Circle'
 }, {
@@ -1538,6 +1652,7 @@ var communicationData = [{
             content: 'Word'
         }],
     },
+    menuId: 'wordCircle',
     toolTip: 'Represent a Word',
     type: 'Circle'
 }, {
@@ -1552,6 +1667,7 @@ var communicationData = [{
             content: 'Collection'
         }]
     },
+    menuId: 'collection',
     toolTip: 'Represent a Collection of Entity',
     type: 'Circle'
 }, {
@@ -1564,6 +1680,7 @@ var communicationData = [{
             content: 'Entity'
         }],
     },
+    menuId: 'entitycircle',
     toolTip: 'Represents an Entity',
     type: 'Circle'
 }, {
@@ -1571,6 +1688,7 @@ var communicationData = [{
     title: 'x',
     annotation: 'x',
     toolTip: 'Represents Communication',
+    menuId: 'communication',
     type: 'Text'
 }, {
     id: 'relationship123',
@@ -1583,6 +1701,7 @@ var communicationData = [{
         radius: 35,
         ports: rectPorts
     },
+    menuId: 'empty',
     toolTip: 'Use to Show a Relationship',
     type: 'Circle'
 }, {
@@ -1596,6 +1715,7 @@ var communicationData = [{
         radius: 35,
         ports: rectPorts
     },
+    menuId: 'empty',
     toolTip: 'Use to Show a Comparision',
     type: 'Circle'
 }, {
@@ -1630,6 +1750,7 @@ var communicationData = [{
         height: 50,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Two Input Communication'
 }, {
     id: 'communicationMixtureCommunication2',
@@ -1663,6 +1784,7 @@ var communicationData = [{
         height: 50,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Multi Input Communication'
 }, {
     id: 'groupCommunication',
@@ -1696,6 +1818,7 @@ var communicationData = [{
         height: 75,
         width: 50
     },
+    menuId: 'commMix',
     toolTip: 'Use to Group or Add Entities'
 }, {
     id: 'continuityComm',
@@ -1704,6 +1827,7 @@ var communicationData = [{
         strokeWidth: '1',
         strokeDashArray: '10 5'
     },
+    menuId: 'empty',
     toolTip: 'Show Continuity of Entity',
     type: 'Continuity'
 }, {
@@ -1711,11 +1835,13 @@ var communicationData = [{
     title: 'Entities',
     annotation: 'Entities',
     toolTip: 'Represents a Group of Entity',
+    menuId: 'entity',
     type: 'Overlap'
 }, {
     id: 'communicatonElements',
     title: 'Communication Elements',
     annotation: 'Communication Elements',
+    menuId: 'communication',
     toolTip: 'A Group of Communication Element',
     type: 'Overlap'
 }, {
@@ -1723,12 +1849,14 @@ var communicationData = [{
     title: 'Questions',
     annotation: 'Questions',
     toolTip: 'Represents a Group of Question',
+    menuId: 'question',
     type: 'Overlap'
 }, {
     id: 'answers',
     title: 'Answers',
     annotation: 'Answers',
     toolTip: 'Represents a Group of Answer',
+    menuId: 'answer',
     type: 'Overlap'
 }];
 //#endregion

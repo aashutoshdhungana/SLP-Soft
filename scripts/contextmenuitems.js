@@ -49,7 +49,7 @@ var menuItems = [{
             onClick: '',
             text: 'Green'
         }]
-    }, {
+    }, 'sep',{
         onClick: 'openSubList',
         text: 'Send and receive signals',
         sub: [{
@@ -154,7 +154,30 @@ var menuItems = [{
         }]
     }, {
         onClick: 'openSubList',
-        text: 'Edit'
+        text: 'Edit',
+        sub: [{
+            onClick: '',
+            text: 'Delete',
+            icon: 'flaticon-delete'
+        }, {
+            onClick: '',
+            text: 'Copy',
+            icon: 'flaticon-copy'
+        }, {
+            onClick: '',
+            text: 'Paste',
+            icon: 'flaticon-paste'
+        }, {
+            onClick: '',
+            text: 'Cut',
+            icon : 'flaticon-scissors'
+        }, 'sep', {
+            onClick: '',
+            text: 'Edit Text'
+        }, 'sep', {
+            onClick: '',
+            text: 'Select All'
+        }]
     }]
 }, {
     id: 'communicationHolder',
@@ -196,7 +219,30 @@ var menuItems = [{
         text: 'Relate Communication Holder with principle aspect'
     }, 'sep', {
         onClick: 'openSubList',
-        text: 'Edit'
+        text: 'Edit',
+        sub: [{
+            onClick: '',
+            text: 'Delete',
+            icon: 'flaticon-delete'
+        }, {
+            onClick: '',
+            text: 'Copy',
+            icon: 'flaticon-copy'
+        }, {
+            onClick: '',
+            text: 'Paste',
+            icon: 'flaticon-paste'
+        }, {
+            onClick: '',
+            text: 'Cut',
+            icon : 'flaticon-scissors'
+        }, 'sep', {
+            onClick: '',
+            text: 'Edit Text'
+        }, 'sep', {
+            onClick: '',
+            text: 'Select All'
+        }]
     }]
 }, {
     id: 'commMix',
@@ -208,7 +254,30 @@ var menuItems = [{
         text: 'Remove Input'
     }, {
         onClick: 'openSubList',
-        text: 'Edit'
+        text: 'Edit',
+        sub: [{
+            onClick: '',
+            text: 'Delete',
+            icon: 'flaticon-delete'
+        }, {
+            onClick: '',
+            text: 'Copy',
+            icon: 'flaticon-copy'
+        }, {
+            onClick: '',
+            text: 'Paste',
+            icon: 'flaticon-paste'
+        }, {
+            onClick: '',
+            text: 'Cut',
+            icon : 'flaticon-scissors'
+        }, 'sep', {
+            onClick: '',
+            text: 'Edit Text'
+        }, 'sep', {
+            onClick: '',
+            text: 'Select All'
+        }]
     }]
 }, {
     id: 'personAspect',
@@ -235,7 +304,30 @@ var menuItems = [{
         text: 'Relate person aspect with main set of principle'
     }, {
         onClick: 'openSubList',
-        text: 'Edit'
+        text: 'Edit',
+        sub: [{
+            onClick: '',
+            text: 'Delete',
+            icon: 'flaticon-delete'
+        }, {
+            onClick: '',
+            text: 'Copy',
+            icon: 'flaticon-copy'
+        }, {
+            onClick: '',
+            text: 'Paste',
+            icon: 'flaticon-paste'
+        }, {
+            onClick: '',
+            text: 'Cut',
+            icon : 'flaticon-scissors'
+        }, 'sep', {
+            onClick: '',
+            text: 'Edit Text'
+        }, 'sep', {
+            onClick: '',
+            text: 'Select All'
+        }]
     }]
 }, {
     id: 'cover',
@@ -250,7 +342,30 @@ var menuItems = [{
         text: 'Show Person'
     }, 'sep', {
         onClick: 'openSubList',
-        text: 'Edit'
+        text: 'Edit',
+        sub: [{
+            onClick: '',
+            text: 'Delete',
+            icon: 'flaticon-delete'
+        }, {
+            onClick: '',
+            text: 'Copy',
+            icon: 'flaticon-copy'
+        }, {
+            onClick: '',
+            text: 'Paste',
+            icon: 'flaticon-paste'
+        }, {
+            onClick: '',
+            text: 'Cut',
+            icon : 'flaticon-scissors'
+        }, 'sep', {
+            onClick: '',
+            text: 'Edit Text'
+        }, 'sep', {
+            onClick: '',
+            text: 'Select All'
+        }]
     }]
 }, {
     id: 'communication',
@@ -450,7 +565,7 @@ var menuItems = [{
         text: 'Edit'
     }]
 }, {
-    id: 'Entity',
+    id: 'entity',
     list: [{
         onClick: '',
         text: 'Replace entity with picture'
@@ -1241,7 +1356,7 @@ var menuItems = [{
         text: 'Edit'
     }]
 }, {
-    id: 'prinicple',
+    id: 'principle',
     list: [{
         onClick: '',
         text: 'Identify Part of Principle'
@@ -2044,7 +2159,7 @@ var menuItems = [{
         text: 'Replace input element with photo'
     }, {
         onClick: '',
-        text: 'Replace iniput element with video'
+        text: 'Replace input element with video'
     }, {
         onClick: '',
         text: 'Replace input element with sketch'
@@ -2056,13 +2171,13 @@ var menuItems = [{
     id: 'derrivative',
     list: [{
         onClick: '',
-        text: 'Replace input element with photo'
+        text: 'Replace with photo'
     }, {
         onClick: '',
-        text: 'Replace input element with video'
+        text: 'Replace with video'
     }, {
         onClick: '',
-        text: 'Replace input element with sketch'
+        text: 'Replace with sketch'
     }, 'sep', {
         onClick: 'openSubList',
         text: 'Edit'
@@ -2162,15 +2277,14 @@ function getMenuItems(shapeName) {
 }
 
 function onOpenContextMenu(args) {
+    clearContextMenu();
     if (diagram.selectedItems.nodes.length)
     {
         let menuItems = getMenuItems(diagram.selectedItems.nodes[0].properties.addInfo[0].menuId).list
-        clearContextMenu();
         addToContextMenu(menuItems);
     }
 
     else {
-        clearContextMenu();
         addToContextMenu(getMenuItems('fundamentalTheory').list);
     }
 }
@@ -2287,12 +2401,4 @@ function closeDiagramContextMenu() {
 
 function closeSubListMenu() {
     document.getElementById('subListDiagram').style.display = 'none';
-}
-
-// Mapping function
-// -- This function takes the id of the node and returns the menulist
-// -- Map ids to the list
-// -- multiple ids have same list
-function mapIdToMenuItem() {
-    
 }

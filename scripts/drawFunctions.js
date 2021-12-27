@@ -35,7 +35,7 @@ var rectPorts = [{
     width: 4,
     height: 4
 }]
-function drawShape({ id, title, annotation, toolTip, type }) {
+function drawShape({ id, title, annotation, toolTip, type, menuId }) {
     let node;
     if (type === 'Ellipse') {
         node = {
@@ -276,7 +276,6 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             addInfo: [{
                 title,
                 toolTip,
-                menuId: 'personShapes'
             }],
             shape: {
                 type: 'Native',
@@ -1401,9 +1400,8 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             },
 
             annotations: [{
-                content: 'ET',
-                offset: {x: 0.14, y: 0.5},
-                width: 75
+                template: '<div>E<sub>t</sub></div>',
+                offset: {x: 0.2, y: 0.5},
             }, {
                 content: 'PT',
                 offset: {x: 0.39, y: 0.5},
@@ -1857,5 +1855,6 @@ function drawShape({ id, title, annotation, toolTip, type }) {
             }
         };
     }
+    node.addInfo[0].menuId = menuId;
     return node;
 }
