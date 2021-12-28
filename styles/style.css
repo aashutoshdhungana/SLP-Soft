@@ -311,22 +311,33 @@ ul {
 
 .e-contextmenu-wrapper ul .e-menu-item, .e-contextmenu-container ul .e-menu-item {
     height: max-content;
-    line-height: 27px;
+    line-height: 24px;
 }
 
 #diagram_contextMenu {
-    font-size: small;
+    font-size: 12px;
+    color: #444444;
 }
 
 #subListDiagram {
-    font-size: small;
+    font-size: 12px;
+    color: #444444;
 }
 
 #subListDiagram li {
     height: max-content;
-    line-height: 27px;
+    line-height: 24px;
 }
 
 .e-ribbon .e-active-content {
     z-index: 999;
+}
+
+.grey-onhover:hover {
+    background-color:#EEEEEE;
+    color: #222222;
+}
+
+.hidden {
+    display: none;
 }

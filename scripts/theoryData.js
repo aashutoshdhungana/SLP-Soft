@@ -560,6 +560,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Interface To The Right',
     type: 'Arrow'
 }, {
@@ -575,6 +576,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Interface To The Left',
     type: 'Arrow'
 }, {
@@ -591,6 +593,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Interface To The Top',
     type: 'Arrow'
 }, {
@@ -607,6 +610,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Interface Down',
     type: 'Arrow'
 }, {
@@ -622,6 +626,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Dependency Interface',
     type: 'Arrow'
 }, {
@@ -637,6 +642,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Give Rise Interface',
     type: 'Arrow'
 }, {
@@ -652,6 +658,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Point to Interface',
     type: 'Arrow'
 }, {
@@ -666,6 +673,7 @@ let theoryInterface = [{
             target: 'Arrow'
         }
     },
+    menuId: 'edit',
     toolTip: 'Apply Interface',
     type: 'Arrow'
 }, {
@@ -681,6 +689,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Execute Interface',
     type: 'Arrow'
 }, {
@@ -696,6 +705,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use to Show Contribution Interface',
     type: 'Arrow'
 }, {
@@ -711,6 +721,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'System Associates with Theory',
     type: 'Arrow'
 }, {
@@ -726,6 +737,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use For Enable Relationship',
     type: 'Arrow'
 }, {
@@ -741,6 +753,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'System Related To Theory',
     type: 'Arrow'
 }, {
@@ -756,6 +769,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Instrument Derive From Theory',
     type: 'Arrow'
 }, {
@@ -773,6 +787,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use For System Interaction',
     type: 'Arrow'
 }, {
@@ -790,6 +805,7 @@ let theoryInterface = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use For System Interaction',
     type: 'Arrow'
 }, {
@@ -802,6 +818,7 @@ let theoryInterface = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'edit',
     toolTip: 'Use For Related Entities',
     type: 'Circle'
 }, {
@@ -814,6 +831,7 @@ let theoryInterface = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'edit',
     toolTip: 'Use For Similariry Entities',
     type: 'Circle'
 }, {
@@ -826,12 +844,14 @@ let theoryInterface = [{
         radius: 35,
         fill: 'White'
     },
+    menuId: 'edit',
     toolTip: 'Use For Related Entities',
     type: 'Circle'
 }, {
     id: 'realtionshipBiArrow',
     title: 'Relationship',
     annotation: '',
+    menuId: 'edit',
     toolTip: 'Left And Right Relationship',
     type: 'BiWideArrow'
 }, {
@@ -841,6 +861,7 @@ let theoryInterface = [{
         direction: 'Right',
         content: ''
     },
+    menuId: 'edit',
     toolTip: 'Left to Right Relationship',
     type: 'WideArrow'
 }, {
@@ -850,12 +871,14 @@ let theoryInterface = [{
         direction: 'left',
         content: ''
     },
+    menuId: 'edit',
     toolTip: 'Right to Left Relationship',
     type: 'WideArrow'
 }, {
     id: 'linkednodeinterface',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -871,6 +894,7 @@ let theorySignals = [{
         fill: 'LimeGreen',
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Denote Positive Flow',
     type: 'Circle'
 }, {
@@ -881,6 +905,7 @@ let theorySignals = [{
         fill: 'Red',
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Denote Negative Flow',
     type: 'Circle'
 }, {
@@ -895,6 +920,7 @@ let theorySignals = [{
             target: 'Arrow'
         }
     },
+    menuId: 'edit',
     toolTip: 'Denote Positive Flow Direction',
     type: 'Arrow'
 }, {
@@ -909,12 +935,14 @@ let theorySignals = [{
             target: 'Arrow'
         }
     },
+    menuId: 'edit',
     toolTip: 'Denote Negative Flow Direction',
     type: 'Arrow'
 }, {
     id: 'linkednodesignal',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -1074,6 +1102,7 @@ let instrumentData = [{
     id: 'linkednodeinstrument',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -1404,6 +1433,7 @@ let theoryStability = [{
         length: 400,
         style: {strokeDashArray: '10 5'},
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Basis',
     type: 'HorizontalLine'
 }, {
@@ -1411,6 +1441,7 @@ let theoryStability = [{
     title: 'Basis',
     annotation: 'k',
     toolTip: 'Identify Out Basis',
+    menuId: 'edit',
     type: 'Basis'
 }, {
     id: 'stabilityLine',
@@ -1419,6 +1450,7 @@ let theoryStability = [{
         style: {strokeDashArray: '10 5'},
         length: 400
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Stablility Line',
     type: 'HorizontalLine'
 }, {
@@ -1428,6 +1460,7 @@ let theoryStability = [{
         length: 600,
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Stability Line With Connector',
     type: 'HorizontalLine'
 }, {
@@ -1440,27 +1473,32 @@ let theoryStability = [{
             content: 'k'
         }],
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Basis',
 }, {
     id: 'k1',
     title: 'k',
     annotation: 'k',
+    menuId: 'edit',
     toolTip: 'Identify Out Stability',
     type: 'Text'
 }, {
     id: 'destination',
     title: 'Destination',
     annotation: 'k',
+    menuId: 'edit',
     toolTip: 'Identify Our Destination',
     type: 'House1'
 }, {
     id: 'direction',
     title: 'Direction',
+    menuId: 'edit',
     toolTip: 'Identify Our Direction',
     type: 'Direction'
 }, {
     id: 'mobilitystability',
     title: 'Mobility',
+    menuId: 'edit',
     toolTip: 'Identify Our Mobility',
     type: 'mobility'
 } ,{
@@ -1475,6 +1513,7 @@ let theoryStability = [{
         length: 150,
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Location',
     type: 'VerticalLine'
 }, {
@@ -1491,6 +1530,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Distance',
     type: 'Arrow'
 }, {
@@ -1507,6 +1547,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Route',
     type: 'Arrow'
 }, {
@@ -1523,6 +1564,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Route',
     type: 'Arrow'
 } ,{
@@ -1530,6 +1572,7 @@ let theoryStability = [{
     title: 'Theory Scale',
     annotation: 'Hello',
     toolTip: 'Identify The Theory Scale Distance',
+    menuId: 'edit',
     type: 'TheoryScale'
 }, {
     id: 'scaleMark',
@@ -1543,6 +1586,7 @@ let theoryStability = [{
         length: 50,
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use to Put Mark On Scale',
     type: 'VerticalLine'
 }, {
@@ -1553,6 +1597,7 @@ let theoryStability = [{
         style: {},
         shape: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify The Uphill Path',
     type: 'Arrow'
 }, {
@@ -1563,6 +1608,7 @@ let theoryStability = [{
         style: {},
         shape: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify The Downhill Path',
     type: 'Arrow'
 }, {
@@ -1577,6 +1623,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify a Time Mark',
     type: 'VerticalLine'
 }, {
@@ -1593,6 +1640,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Progress Time',
     type: 'Arrow'
 }, {
@@ -1609,6 +1657,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Decline Time',
     type: 'Arrow'
 }, {
@@ -1623,6 +1672,7 @@ let theoryStability = [{
             margin: {left: 20}
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Point of Lost',
     type: 'HorizontalLine'
 }, {
@@ -1637,6 +1687,7 @@ let theoryStability = [{
             margin: {left: 20}
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Point of Gain',
     type: 'HorizontalLine'
 }, {
@@ -1652,6 +1703,7 @@ let theoryStability = [{
             alignment: 'After'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Lost',
     type: 'Arrow'
 }, {
@@ -1667,6 +1719,7 @@ let theoryStability = [{
             alignment: 'After'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Specific Gain',
     type: 'Arrow'
 }, {
@@ -1678,6 +1731,7 @@ let theoryStability = [{
         isPoint: true
     },
     toolTip: 'Identify a Point Of Stability',
+    menuId: 'edit',
     type: 'Circle'
 }, {
     id: 'functionExecution',
@@ -1689,6 +1743,7 @@ let theoryStability = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Function Execute At Specific Time',
     type: 'Arrow'
 }, {
@@ -1700,6 +1755,7 @@ let theoryStability = [{
             content: 'Domain Name'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Domain To The Left',
     type: 'DomainLeft'
 }, {
@@ -1711,6 +1767,7 @@ let theoryStability = [{
             content: 'Domain Name'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Domain To The Right',
     type: 'DomainRight'
 }, {
@@ -1722,6 +1779,7 @@ let theoryStability = [{
             content: 'Domain Name'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Domain Above',
     type: 'DomainTop'
 }, {
@@ -1733,6 +1791,7 @@ let theoryStability = [{
             content: 'Domain Name'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Identify Domain Bottom',
     type: 'DomainBottom'
 }, {
@@ -1748,18 +1807,21 @@ let theoryStability = [{
             alignment: 'Before'
         }
     },
+    menuId: 'edit',
     toolTip: 'Inline to Each Other',
     type: 'Arrow'
 }, {
     id: 'ontop',
     title: 'On Top',
     annotation: 'On Top',
+    menuId: 'edit',
     toolTip: 'Identify an Entity On Top',
     type: 'Text'
 }, {
     id: 'below',
     title: 'Below',
     annotation: 'Below',
+    menuId: 'edit',
     toolTip: 'Identify an Entity On Below',
     type: 'Text'
 } ,{
@@ -1767,12 +1829,14 @@ let theoryStability = [{
     title: 'Graph Axis',
     annotation: ['Label Name', 'Label Name'],
     toolTip: 'Use for Data Representation',
+    menuId: 'edit',
     type: 'Graph'
 }, {
     id: 'philosophy',
     title: 'Philosophy',
     annotation: 'Philosophy',
     toolTip: 'Identify Philosophy',
+    menuId: 'edit',
     type: 'Ellipse'
 }, {
     id: 'changeOfPhilosophy',
@@ -1783,6 +1847,7 @@ let theoryStability = [{
         fill: 'White',
         ports: rectPorts
     },
+    menuId: 'edit',
     toolTip: 'Represent Change Of Philosophy',
     type: 'Circle'
 }, {
@@ -1794,6 +1859,7 @@ let theoryStability = [{
         fill: 'White',
         ports: rectPorts
     },
+    menuId: 'edit',
     toolTip: 'Represent Change Of Philosophy',
     type: 'Circle'
 }, {
@@ -1805,6 +1871,7 @@ let theoryStability = [{
         fill: 'White',
         ports: rectPorts
     },
+    menuId: 'edit',
     toolTip: 'Identify Philosophy',
     type: 'Circle'
 }, {
@@ -1816,6 +1883,7 @@ let theoryStability = [{
         fill: 'White',
         ports: rectPorts
     },
+    menuId: 'edit',
     toolTip: 'Identify Philosophy',
     type: 'Circle'
 }, {
@@ -1827,6 +1895,7 @@ let theoryStability = [{
         fill: 'White',
         ports: rectPorts
     },
+    menuId: 'edit',
     toolTip: 'Identify Change of Philosophy',
     type: 'Circle'
 }, {
@@ -1842,6 +1911,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Show Inherited Philosophy',
     type: 'Arrow'
 }, {
@@ -1857,6 +1927,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Show Pass Through Philosophy',
     type: 'Arrow'
 }, {
@@ -1868,6 +1939,7 @@ let theoryStability = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Show A Direction',
     type: 'Arrow'
 }, {
@@ -1883,6 +1955,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Change Of Time',
     type: 'Arrow'
 }, {
@@ -1895,6 +1968,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Change of Loss',
     type: 'Arrow'
 }, {
@@ -1907,6 +1981,7 @@ let theoryStability = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Change of Gain',
     type: 'Arrow'
 }, {
@@ -1921,6 +1996,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Initial Time',
     type: 'VerticalLine'
 }, {
@@ -1935,6 +2011,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Time After Initial Time',
     type: 'VerticalLine' 
 }, {
@@ -1949,6 +2026,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'More time after initial time',
     type: 'VerticalLine'
 }, {
@@ -1963,6 +2041,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'First Time',
     type: 'VerticalLine'
 }, {
@@ -1977,6 +2056,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Time After Time 1',
     type: 'VerticalLine' 
 }, {
@@ -1991,6 +2071,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Second Time',
     type: 'VerticalLine'
 }, {
@@ -2005,6 +2086,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Time After Second Time',
     type: 'VerticalLine'
 }, {
@@ -2019,6 +2101,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Third Time',
     type: 'VerticalLine'
 }, {
@@ -2033,6 +2116,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Time After Third Time',
     type: 'VerticalLine'
 }, {
@@ -2047,6 +2131,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Identify The Fourth Time',
     type: 'VerticalLine'
 }, {
@@ -2061,6 +2146,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Time After Fourth Time',
     type: 'VerticalLine'
 }, {
@@ -2075,6 +2161,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The Time Prime',
     type: 'VerticalLine'
 }, {
@@ -2089,6 +2176,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote An Initial Time',
     type: 'VerticalLine'
 }, {
@@ -2103,6 +2191,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The First Time',
     type: 'VerticalLine'
 }, {
@@ -2117,6 +2206,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The Second Time',
     type: 'VerticalLine'
 }, {
@@ -2131,6 +2221,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The Third Time',
     type: 'VerticalLine'
 }, {
@@ -2145,6 +2236,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The Fourth Time',
     type: 'VerticalLine'
 }, {
@@ -2159,6 +2251,7 @@ let theoryStability = [{
         length: 250,
         style: {strokeDashArray: '10 5'}
     },
+    menuId: 'edit',
     toolTip: 'Denote The Time Prime',
     type: 'VerticalLine'
 }, {
@@ -2175,6 +2268,7 @@ let theoryStability = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Generation Time',
     type: 'Arrow'
 }, {
@@ -2191,6 +2285,7 @@ let theoryStability = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Generation Time',
     type: 'Arrow'
 }, {
@@ -2207,6 +2302,7 @@ let theoryStability = [{
         },
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Our Generation Time',
     type: 'Arrow'
 }, {
@@ -2217,12 +2313,14 @@ let theoryStability = [{
         fill: 'transparent',
         ports: []
     },
+    menuId: 'edit',
     toolTip: 'Show Continuity Of Entity',
     type: 'Continuity'
 }, {
     id: 'linkednodestablility',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion
@@ -2244,6 +2342,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'
 }, {
@@ -2260,6 +2359,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2276,6 +2376,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2292,6 +2393,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2308,6 +2410,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2324,6 +2427,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2340,6 +2444,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2356,6 +2461,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Information Label',
     type: 'Arrow'  
 }, {
@@ -2368,6 +2474,7 @@ let theoryLabel = [{
         content: [],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Allocate Theorem in Theory',
     type: 'Arrow'
 }, {
@@ -2380,17 +2487,20 @@ let theoryLabel = [{
         content: [],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Allocate Theorem in Theory',
     type: 'Arrow'
 }, {
     id: 'label123',
     title: 'Label',
     toolTip: 'Symbol Identification Label',
+    menuId: 'edit',
     type: 'LeftLabel'
 }, {
     id: 'label',
     title: 'Label',
     toolTip: 'Symbol Identification Label',
+    menuId: 'edit',
     type: 'RightLabel'
 }, {
     id: 'directionLeft',
@@ -2402,6 +2512,7 @@ let theoryLabel = [{
         content: [],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Left Direction',
     type: 'Arrow'
 }, {
@@ -2414,12 +2525,14 @@ let theoryLabel = [{
         content: [],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Identify Right Direction',
     type: 'Arrow'
 }, {
     id: 'crossoutlabel',
     title: 'Cross Out',
     toolTip: 'To Cross Out an Entity',
+    menuId: 'edit',
     type: 'redcross'
 }, {
     id: 'leftCurlBrace',
@@ -2436,6 +2549,7 @@ let theoryLabel = [{
         }],
         orientation: 'left'
     },
+    menuId: 'edit',
     toolTip: 'Use to Group Theorem',
     type: 'Curly'
 }, {
@@ -2453,6 +2567,7 @@ let theoryLabel = [{
         }],
         orientation: 'right'
     },
+    menuId: 'edit',
     type: 'CurlyClose',
     toolTip: 'Use to Group Theorem',
 }, {
@@ -2460,6 +2575,7 @@ let theoryLabel = [{
     title: '#',
     annotation: '#1',
     toolTip: 'Use for Identification',
+    menuId: 'edit',
     type: 'Text'
 }, {
     id: 'node',
@@ -2471,6 +2587,7 @@ let theoryLabel = [{
         radius: 15,
         fill: 'White'
     },
+    menuId: 'edit',
     toolTip: 'Using for Identification',
     type: 'Circle'
 }, {
@@ -2481,6 +2598,7 @@ let theoryLabel = [{
         columnNo: 2
     },
     toolTip: 'Represents a Table of Node',
+    menuId: 'edit',
     type: 'Table'
 }, {
     id: 'separationLine',
@@ -2492,15 +2610,18 @@ let theoryLabel = [{
         }
     },
     toolTip: 'Use to Show Separation',
+    menuId: 'edit',
     type: 'VerticalLine'
 }, {
     id: 'pushUp',
     title: 'Push Up',
+    menuId: 'edit',
     toolTip: 'Selected to Apply',
     type: 'PushUpRight'
 }, {
     id: 'pushUp1',
     title: 'Push Up',
+    menuId: 'edit',
     toolTip: 'Selected to Apply',
     type: 'PushUpLeft'
 }, {
@@ -2516,6 +2637,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Position Up',
     type: 'Arrow'
 }, {
@@ -2531,6 +2653,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Position Down',
     type: 'Arrow'
 }, {
@@ -2546,6 +2669,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Position Up',
     type: 'Arrow'
 }, {
@@ -2561,6 +2685,7 @@ let theoryLabel = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Position Down',
     type: 'Arrow'
 }, {
@@ -2569,12 +2694,14 @@ let theoryLabel = [{
     annotation: {
         strokeWidth: '0'
     },
+    menuId: 'empty',
     toolTip: 'Denote a Continuity',
     type: 'VerticalContinuity'
 }, {
     id: 'linkednodeLabel',
     title: 'Linked Node',
     toolTip: 'Linked Node',
+    menuId: 'linkedNode',
     type: 'linkednode'
 }];
 //#endregion

@@ -1039,17 +1039,16 @@ let commLinkData = [{
                 top: 2, bottom: 2, left: 2, right: 2
             }
         }],
-
         shape: {
             target: 'Arrow'
         },
-
         style: {
             fill: 'black',
             strokeColor: 'black',
             strokeWidth: 1,
         }
     },
+    menuId: 'edit',
     toolTip: 'Right Communication Flow',
     type: 'Arrow'
 }, {
@@ -1074,6 +1073,7 @@ let commLinkData = [{
             strokeWidth: 1,
         }
     },
+    menuId: 'edit',
     toolTip: 'Left Communication Flow',
     type: 'Arrow'
 }, {
@@ -1099,6 +1099,7 @@ let commLinkData = [{
             strokeWidth: 1,
         }
     },
+    menuId: 'edit',
     toolTip: 'Left & RIght Communication Flow',
     type: 'Arrow'
 }, {
@@ -1107,6 +1108,7 @@ let commLinkData = [{
     annotation: {
         content: 'Information'
     },
+    menuId: 'edit',
     toolTip: 'Communication Link With Information',
     type: 'WideArrow'
 }, {
@@ -1116,18 +1118,21 @@ let commLinkData = [{
         content: 'Information',
         direction: 'left'
     },
+    menuId: 'edit',
     toolTip: 'Communication Link With Information',
     type: 'WideArrow'
 }, {
     id: 'biDirectionalArrow',
     title: 'Bidirectional Arrow',
     annotation: 'Information',
+    menuId: 'edit',
     toolTip: 'Communication Link With Information',
     type: 'BiWideArrow'
 }, {
     id: 'communicationLink1',
     title: 'Communication Link',
     annotation: 'Information',
+    menuId: 'edit',
     toolTip: 'Communication Link With Information',
     type: 'CylinderArrow'
 }];
@@ -1149,6 +1154,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Show More Entity Info',
     type: 'Arrow'
 }, {
@@ -1164,6 +1170,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Communication Work Related',
     type: 'Arrow'
 }, {
@@ -1179,6 +1186,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Use With Other Entity',
     type: 'Arrow'
 }, {
@@ -1194,6 +1202,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Word Point To Entity',
     type: 'Arrow'
 }, {
@@ -1209,6 +1218,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Give Rise to Entity',
     type: 'Arrow'
 }, {
@@ -1224,6 +1234,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Comm Error Rise to Problem',
     type: 'Arrow'
 }, {
@@ -1239,6 +1250,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Related to Entity',
     type: 'Arrow'
 }, {
@@ -1254,6 +1266,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Related to Entity By Entity',
     type: 'Arrow'
 }, {
@@ -1269,6 +1282,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Depend on Entity',
     type: 'Arrow'
 }, {
@@ -1284,6 +1298,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Agree With Entity',
     type: 'Arrow'
 }, {
@@ -1299,6 +1314,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Match With Entity',
     type: 'Arrow'
 }, {
@@ -1314,6 +1330,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Have Entity',
     type: 'Arrow'
 }, {
@@ -1329,6 +1346,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Interact Entity',
     type: 'Arrow'
 }, {
@@ -1344,6 +1362,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Use Entity',
     type: 'Arrow',
 }, {
@@ -1359,6 +1378,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Compare Entity',
     type: 'Arrow'
 }, {
@@ -1374,6 +1394,7 @@ let commLabelData = [{
             alignment: 'Before'
         }]
     },
+    menuId: 'edit',
     toolTip: 'Entity Attach to Entity',
     type: 'Arrow'
 }, {
@@ -1390,6 +1411,7 @@ let commLabelData = [{
             }
         }],
     },
+    menuId: 'edit',
     toolTip: 'Left Braces',
     type: 'Curly'
 }, {
@@ -1406,6 +1428,7 @@ let commLabelData = [{
             }
         }],
     },
+    menuId: 'edit',
     type: 'CurlyClose',
     toolTip: 'Right Braces',
 }];
@@ -1423,6 +1446,7 @@ let commSignalData = [{
         radius: 12.5,
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Represents a Comm Without Error',
     type: 'Circle'
 }, {
@@ -1433,6 +1457,7 @@ let commSignalData = [{
         radius: 12.5,
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Represents a Comm With Error',
     type: 'Circle'
 }, {
@@ -1443,6 +1468,7 @@ let commSignalData = [{
         radius: 12.5,
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Represents a Comm as Feedback',
     type: 'Circle'
 }, {
@@ -1458,6 +1484,7 @@ let commSignalData = [{
             strokeWidth: 1
         }
     },
+    menuId: 'edit',
     toolTip: 'Show Green Communication Flow',
     type: 'Arrow'
 }, {
@@ -1474,6 +1501,7 @@ let commSignalData = [{
             strokeWidth: 1,
         }
     },
+    menuId: 'edit',
     toolTip: 'Show Red Communication Flow',
     type: 'Arrow'
 }, {
@@ -1490,6 +1518,7 @@ let commSignalData = [{
             strokeWidth: 1
         }
     },
+    menuId: 'edit',
     toolTip: 'Show Blue Communication Flow',
     type: 'Arrow'
 }];
@@ -1873,6 +1902,7 @@ let otherData = [{
             strokeDashArray: '10 5'
         }
     },
+    menuId: 'edit',
     toolTip: 'Use to Show Separation',
     type: 'VerticalLine'
 }, {
@@ -1888,6 +1918,7 @@ let otherData = [{
             alignment: 'Before'
         }],
     },
+    menuId: 'edit',
     toolTip: 'Identify a Time',
     type: 'Arrow'
 }, {
@@ -1898,6 +1929,7 @@ let otherData = [{
         height: 20,
         width: 400
     },
+    menuId: 'edit',
     nodes: [],
     toolTip: 'Use to Show Progress',
 }, {
@@ -1912,6 +1944,7 @@ let otherData = [{
         length: 600,
         style: { strokeDashArray: '' }
     },
+    menuId: 'edit',
     toolTip: 'Use For Graph or Chart',
     type: 'HorizontalLine'
 }, {
@@ -1926,6 +1959,7 @@ let otherData = [{
         length: 600,
         style: { strokeDashArray: '' }
     },
+    menuId: 'edit',
     toolTip: 'Insert a Date Line',
     type: 'VerticalLine'
 }, {
@@ -1963,6 +1997,7 @@ let otherData = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Principle of Operation Line',
     type: 'HorizontalLine'
 }, {
@@ -1970,6 +2005,7 @@ let otherData = [{
     title: 'Note',
     annotation: 'My Note',
     toolTip: 'Represent a Note',
+    menuId: 'edit',
     type: 'Note'
 }, {
     id: 'nodeOthers',
@@ -1981,12 +2017,14 @@ let otherData = [{
         radius: 15,
         fill: 'White'
     },
+    menuId: 'edit',
     toolTip: 'Represent a Node',
     type: 'Circle'
 }, {
     id: 'callOut',
     title: 'Callout',
     annotation: 'My Text',
+    menuId: 'edit',
     toolTip: 'Represent a Callout',
     type: 'Callout'
 }, {
@@ -1996,6 +2034,7 @@ let otherData = [{
         content: ['Node Number', 'Information', '1', ''],
         columnNo: 2
     },
+    menuId: 'edit',
     toolTip: 'Represents a Table of Node',
     type: 'Table'
 }, {
@@ -2003,12 +2042,14 @@ let otherData = [{
     title: 'Statement',
     annotation: 'Statement',
     toolTip: 'Identify a Statement',
+    menuId: 'edit',
     type: 'Text'
 }, {
     id: 'numberIdentification',
     title: 'Number Identification',
     annotation: '#1',
     toolTip: 'Use to Identify Entity',
+    menuId: 'edit',
     type: 'Text'
 }, {
     id: 'entityInclusionLineHorizontal',
@@ -2046,6 +2087,7 @@ let otherData = [{
         style: {}
     },
     toolTip: 'Entity has Entities',
+    menuId: 'edit',
     type: 'HorizontalLine'
 }, {
     id: 'entityInclusionLineVertical',
@@ -2082,6 +2124,7 @@ let otherData = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Entity has Entities',
     type: 'VerticalLine'
 }, {
@@ -2091,6 +2134,7 @@ let otherData = [{
         content: ['Communication', '', 'Application Value', '', 'Communication Function', ''],
         columnNo: 3
     },
+    menuId: 'edit',
     toolTip: 'Communication change Application Tablulated Form',
     type: 'Table'
 }, {
@@ -2105,6 +2149,7 @@ let otherData = [{
         offset: {x: 0, y:0.5},
         margin: {right: 10}
     }],
+    menuId: 'edit',
     toolTip: 'Communication Change Application Graphical Form',
     type: 'Graph'
 }, {
@@ -2114,6 +2159,7 @@ let otherData = [{
         type: 'Straight',
         shape: {}
     },
+    menuId: 'edit',
     toolTip: 'Use to Draw Graph',
     type: 'Arrow'
 }, {
@@ -2124,6 +2170,7 @@ let otherData = [{
         radius: 5,
         isPoint: true
     },
+    menuId: 'edit',
     toolTip: 'Use to Draw Graph',
     type: 'Circle'
 }, {
@@ -2135,6 +2182,7 @@ let otherData = [{
             target: 'Circle'
         }
     },
+    menuId: 'edit',
     toolTip: 'Use to Draw Graph',
     type: 'Arrow'
 }, {
@@ -2149,6 +2197,7 @@ let otherData = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use to Graph',
     type: 'HorizontalLine'
 }, {
@@ -2163,6 +2212,7 @@ let otherData = [{
         }],
         style: {}
     },
+    menuId: 'edit',
     toolTip: 'Use to Graph',
     type: 'VerticalLine'
 }];

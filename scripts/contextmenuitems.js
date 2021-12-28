@@ -2269,6 +2269,24 @@ var menuItems = [{
         onClick: 'openSubList',
         text: 'Edit'
     }]
+}, {
+    id: 'edit',
+    list: [{
+        onClick: '',
+        text: 'Cut',
+        icon : 'flaticon-scissors'
+    }, {
+        onClick: '',
+        text: 'Copy',
+        icon: 'flaticon-copy'
+    }, {
+        onClick: '',
+        text: 'Paste',
+        icon: 'flaticon-paste'
+    }, 'sep', {
+        onClick: '',
+        text: 'Edit Text'
+    }]
 }];
 
 
@@ -2276,16 +2294,19 @@ function getMenuItems(shapeName) {
     return menuItems.find(x => x.id === shapeName);
 }
 
-function onOpenContextMenu(args) {
+function onOpenContextMenu(args) { 
     clearContextMenu();
     if (diagram.selectedItems.nodes.length)
     {
+        if (diagram.selectedItems.nodes[0].properties.addInfo[0].menuId === 'empty') {
+            args.cancel = true;
+        }
         let menuItems = getMenuItems(diagram.selectedItems.nodes[0].properties.addInfo[0].menuId).list
         addToContextMenu(menuItems);
     }
 
     else {
-        addToContextMenu(getMenuItems('fundamentalTheory').list);
+        addToContextMenu(getMenuItems('edit').list);
     }
 }
 
@@ -2316,7 +2337,7 @@ function addToContextMenu(menuList) {
         }
         else if (menuList[i] === 'sep') {
             listItem.style.height = '0';
-            listItem.style.borderBottom = 'solid black 1px';
+            listItem.style.borderBottom = 'solid lightgrey 1px';
             listItem.style.paddingLeft = '0';
             listItem.style.marginLeft = '16px'
             list.push(listItem);
@@ -2325,6 +2346,12 @@ function addToContextMenu(menuList) {
             listItem.addEventListener("mouseover", (event) => {
                 closeSubListMenu();
             });
+            if (menuList[i].icon != undefined) {
+                let iconSpan = document.createElement('span');
+                iconSpan.classList.add(menuList[i].icon);
+                iconSpan.style.marginRight = '5px';
+                listItem.appendChild(iconSpan);
+            }
             listItem.append(menuList[i].text);
             list.push(listItem);
         }
@@ -2349,7 +2376,7 @@ function openSubContextMenu(menuList, top, left, parent) {
 
     for (let i = 0; i < menuList.length; i++) {
         let listItem = document.createElement('li');
-        listItem.classList.add('e-menu-item');
+        listItem.classList.add('e-menu-item', 'grey-onhover');
         console.log(menuList[i].icon);
         if (menuList[i].icon != undefined) {
             let iconSpan = document.createElement('span');
@@ -2362,7 +2389,7 @@ function openSubContextMenu(menuList, top, left, parent) {
         }
         else if (menuList[i] === 'sep') {
             listItem.style.height = '0';
-            listItem.style.borderBottom = 'solid black 1px';
+            listItem.style.borderBottom = 'solid lightgrey 1px';
             listItem.style.paddingLeft = '0';
             listItem.style.marginLeft = '16px'
             ul.appendChild(listItem);
