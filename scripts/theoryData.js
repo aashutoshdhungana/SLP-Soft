@@ -1115,7 +1115,7 @@ let theoryFunctions = [{
     title: 'Functional System',
     annotation: {
         radius: 150,
-        fill: 'White',
+        fill: 'Transparent',
         content: [{
             content: 'Functional System',
             offset: {x: 0.5, y: 1},
@@ -2708,3 +2708,71 @@ let theoryLabel = [{
 function getTheoryLabel() {
     return theoryLabel.map(data => drawShape(data));
 }
+
+//#region quick
+let quickTheoryElements = [{
+    id: 'quickPhysicalSystem',
+    title: 'Physical System',
+    annotation: ['System'],
+    toolTip: 'Identify a Person',
+    menuId: 'system',
+    type: 'Person'
+}, {
+    id: 'quickPhysicalSystem1',
+    title: 'Physical System',
+    annotation: ['System'],
+    toolTip: 'Identify a Person',
+    menuId: 'system',
+    type: 'PersonNoFrame'
+}, {
+    id: 'quickTheory',
+    title: 'Theory',
+    annotation: 'Theory',
+    menuId: 'theory',
+    toolTip:'Identify a Person'
+}, {
+    id: 'quickTheorem',
+    title: 'Theoren',
+    annotation: 'Theorem',
+    menuId: 'theorem',
+    toolTip: 'Identify a Theorem'
+}, {
+    id: 'quickApplyTheory',
+    title: 'Apply Theory',
+    annotation: 'Apply',
+    menuId: 'theory',
+    toolTip: 'Apply Application Theory'
+}, {
+    id: 'quickInstrument',
+    title: 'Instrument',
+    annotation: 'Instrument',
+    menuId: 'instrument',
+    toolTip: 'Identify a Instrument'
+}, {
+    id: 'quickMethod',
+    title: 'Method',
+    annotation: 'Method',
+    menuId: 'method',
+    toolTip: 'Identify a Method'
+}, {
+    id: 'quickInputElement',
+    title: 'Input Element',
+    annotation: [{
+        content: 'Input Element',
+        offset: {x: 0.5, y: 1},
+        margin: {top: 20}
+    }],
+    menuId: 'inputElement',
+    toolTip: 'Identify an Input Element'
+}, {
+    id: 'quickAddedFunction',
+    title: 'Added Function',
+    annotation: 'Added Function',
+    menuId: 'addedFunction',
+    toolTip: 'Identify An Added Function'
+}];
+
+function getQuickTheory() {
+    return quickTheoryElements.map(data => drawShape(data));
+}
+//#endregion

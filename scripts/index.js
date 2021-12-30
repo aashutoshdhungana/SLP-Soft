@@ -8,6 +8,7 @@ let commSignal = getCommSignal();
 let area = getCommAreAndLocation();
 let others = getCommOthers();
 let commlabel = getCommLabel();
+let quickComm = getQuickComm();
 
 let system = getThoerySystem();
 let thoery = getTheory();
@@ -18,7 +19,7 @@ let instrument = getTheoryInstrument();
 let functions = getTheoryFunction();
 let stability = getTheoryStability();
 let thoerylabel = getTheoryLabel();
-
+let quickTheory = getQuickTheory();
 let allShapes = [].concat(persons).concat(communication).concat(application).concat(commLink).
     concat(analysis).concat(commSignal).concat(area).concat(others).concat(commlabel).concat(system).
     concat(thoery).concat(fundamental).concat(interface).concat(theorySignal).concat(instrument).concat(functions).
@@ -34,11 +35,11 @@ var text = JSON.stringify(allShapes);
 // a.download = 'my.json';
 // a.click();
 
-
 // Initializing symbol palette
 var commPalette = new ej.diagrams.SymbolPalette({
     expandMode: 'Single',
     palettes : [
+        {id: 'quickshapes', expanded:false, symbols: quickComm, title: 'Quick Entities'},
         {id: 'person', expanded:true, symbols: persons, title:'Person'},
         {id: 'Communication', expanded:false, symbols: communication, title: 'Communication'},
         {id: 'Application', expanded: false, symbols: application, title: 'Application'},
@@ -69,6 +70,7 @@ var commPalette = new ej.diagrams.SymbolPalette({
 var theoryPalette = new ej.diagrams.SymbolPalette({
     expandMode: 'Single',
     palettes : [
+        {id: 'quickshapestheory', expanded:false, symbols: quickTheory, title: 'Quick Entities'},
         {id: 'system', expanded:true, symbols: system, title:'System'},
         {id: 'theory', expanded:false, symbols: thoery, title:'Theory'},
         {id: 'fundamental', expanded:false, symbols: fundamental, title:'Fundamental'},

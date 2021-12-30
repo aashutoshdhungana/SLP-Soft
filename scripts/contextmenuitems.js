@@ -894,7 +894,7 @@ var menuItems = [{
         onClick: '',
         text: 'Relate Application with Principle\'s aspect'
     }, {
-        onclick: 'openSubList',
+        onClick: 'openSubList',
         text: 'Edit'
     }]
 }, {
@@ -918,7 +918,7 @@ var menuItems = [{
         onClick: '',
         text: 'Replace fuction with audio'
     }, {
-        onclick: '',
+        onClick: '',
         text: 'Replace function with sketch'
     }, 'sep', {
         onClick: '',
@@ -990,7 +990,7 @@ var menuItems = [{
         onClick: '',
         text: 'Replace fuction with audio'
     }, {
-        onclick: '',
+        onClick: '',
         text: 'Replace function with sketch'
     }, 'sep', {
         onClick: '',
@@ -1094,7 +1094,7 @@ var menuItems = [{
         onClick: '',
         text: 'Relate Work with Principle\'s Aspect'
     }, 'sep', {
-        onclick: 'openSubList',
+        onClick: 'openSubList',
         text: 'Edit'
     }]
 }, {
@@ -1121,10 +1121,10 @@ var menuItems = [{
         onClick: '',
         text: 'Replace Work with Sketch'
     }, 'sep', {
-        onclick: '',
+        onClick: '',
         text: 'Relate Work with Principle'
     }, {
-        onclick: '',
+        onClick: '',
         text: 'Relate Work with opeating principle'
     }, {
         onClick: '',
@@ -1879,7 +1879,7 @@ var menuItems = [{
         onClick: '',
         text: 'Open Model'
     }, 'sep', {
-        onClick: 'openSubModel',
+        onClick: 'openSubList',
         text: 'Edit'
     }]
 }, {
@@ -2323,14 +2323,21 @@ function addToContextMenu(menuList) {
     for (let i = 0; i < menuList.length; i++) {
         let listItem = document.createElement('li');
         listItem.classList.add('e-menu-item');
+        
         if (menuList[i].onClick === 'openSubList') {
+            let subList = menuList[i].sub;
+            if (menuList[i].text === 'Edit') {
+                let tempArray = getMenuItems('personShapes').list;
+                subList = tempArray[tempArray.length - 1].sub;
+                console.log(subList);
+            }
             listItem.append(menuList[i].text);
             let menuSpan = document.createElement('span');
             menuSpan.classList.add('e-icons', 'e-caret');
             listItem.addEventListener("mouseover", (event) => {
                 let ypos = event.target.getBoundingClientRect().y;
                 let xpos = contextMenu.getBoundingClientRect().x + contextMenu.clientWidth;
-                openSubContextMenu(menuList[i].sub, ypos, xpos, event.target);
+                openSubContextMenu(subList, ypos, xpos, event.target);
             });
             listItem.appendChild(menuSpan);
             list.push(listItem);

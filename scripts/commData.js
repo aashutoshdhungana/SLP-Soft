@@ -1534,8 +1534,14 @@ var communicationData = [{
     annotation: 'Communication',
     menuId: 'communication',
     toolTip: 'Represents a Communication'
-
 }, {
+    id: 'commText',
+    title: 'Communication',
+    annotation: 'Communication',
+    menuId: 'communication',
+    toolTip: 'Represents a Communication',
+    type: 'Text'
+},{
     id: 'x',
     title: 'x',
     annotation: 'x',
@@ -2221,4 +2227,130 @@ let otherData = [{
 
 function getCommOthers() {
     return otherData.map(data => drawShape(data));
+}
+
+//#region Quick Elements
+let quickElementsComm = [{
+    // person with frame
+    id: 'quickperson',
+    title: 'Person',
+    annotation: ['Person Name', 'No Title'],
+    toolTip: 'A Person Without Title',
+    menuId: 'personShapes',
+    type: 'Person'
+}, {
+    // person without frame
+    id: 'quickperson1',
+    title: 'Person',
+    annotation: ['Person Name', 'No Title'],
+    toolTip: 'A Person Without Title',
+    menuId: 'personShapes',
+    type: 'PersonNoFrame'
+}, {
+    // Communication Entity
+    id: 'quickcommunicationEntity',
+    title: 'Communication Entity',
+    annotation: 'Communication',
+    menuId: 'communication',
+    toolTip: 'Represents a Communication'
+}, {
+    id: 'quickCommtext',
+    title: 'Communication',
+    annotation: 'Communication',
+    menuId: 'communication',
+    toolTip: 'Represents a Communication',
+    type: 'Text'
+}, {
+    id: 'quickApplication',
+    title: 'Application',
+    annotation: 'Application',
+    menuId: 'application',
+    toolTip: 'Represent an Actual Application'
+}, {
+    id: 'quickcommunicationFunction',
+    title: 'Communication Function',
+    annotation: 'Communication Function',
+    menuId: 'commFunction',
+    toolTip: 'Function of Out Communication'
+}, {
+    id: 'quickCommunicationResult',
+    title: 'Communication Result',
+    annotation: 'Communication Result',
+    menuId: 'commResult',
+    toolTip: 'Result of an Application'
+}, {
+    id: 'quickcommunicationFunction1',
+    title: 'Communication Function',
+    annotation: 'Communication Function',
+    menuId: 'empty',
+    toolTip: 'Represent Commnunication Function',
+    type: 'text'
+}, {
+    id: 'quickCommAppMixture',
+    title: 'Communication App Mixture',
+    annotation: {
+        fill: 'white',
+        radius: 35,
+        content: [{
+            content: 'Comm & App Mixture'
+        }],
+        ports: rectPorts
+    },
+    menuId: 'empty',
+    toolTip: 'Communication Application Mixture',
+    type: 'Circle'
+}, {
+    id: 'quickcommAppMixture1',
+    title: 'Commmunication App Mixture',
+    annotation: {
+        fill: 'white',
+        radius: 35,
+        content: [{
+            content: 'x'
+        }],
+        ports: rectPorts
+    },
+    menuId: 'empty',
+    toolTip: 'Communication Application Mixture',
+    type: 'Circle'
+}, {
+    id: 'quickCommAppMixture2',
+    title: 'Communciation App Mixture',
+    annotation: {
+        content: [{
+            content: 'Comm App Mixture'
+        }],
+        ports: [{
+            id: 'left-1',
+            offset: {x: 0, y: 0.25},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'left-2',
+            offset: {x: 0, y: 0.75},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }, {
+            id: 'right',
+            offset: {x: 1, y: 0.5},
+            visibility: ej.diagrams.PortVisibility.Visible,
+            shape: 'X',
+            width: 4,
+            height: 4
+        }],
+        height: 75,
+        width: 50
+    },
+    menuId: 'commMix',
+    toolTip: 'Multi Inputs Comm & App',
+
+}];
+//#endregion
+
+function getQuickComm() {
+    return quickElementsComm.map(data => drawShape(data));
 }
